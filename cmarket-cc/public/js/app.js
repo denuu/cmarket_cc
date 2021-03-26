@@ -13,53 +13,76 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _formComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formComponent.vue */ "./resources/js/components/formComponent.vue");
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+/* harmony import */ var _inputButton_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./inputButton.vue */ "./resources/js/components/inputButton.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_defineProperty({
-  components: {
-    formComponent: _formComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    title: {
+      type: String
+    },
+    textContent: {
+      type: String
+    },
+    label: {
+      type: String
+    },
+    indexLabel: {
+      type: String
+    },
+    formFields: {
+      type: Array
+    }
   },
   data: function data() {
-    return {
-      title: 'Share your work with us',
-      textContent: 'To ensure the the quality of our marketplace, we limit our seller community to the most qualified creators. Let our curators know why you’d be a great seller:',
-      label: 'Seller Application',
-      currentIndex: 1,
-      total: 2,
-      indexLabel: "Step 1 of 2"
+    return {// title: 'Share your work with us',
+      // textContent: 'To ensure the the quality of our marketplace, we limit our seller community to the most qualified creators. Let our curators know why you’d be a great seller:',
+      // label: 'Seller Application',
+      // currentIndex: 1,
+      // total: 2,
+      // indexLabel: `Step 1 of 2`,
+      // formFields: [
+      //     {name: 'First Name', type: 'text', autocomplete: 'given-name'},
+      //     {name: 'Last Name', type: 'text', autocomplete: 'family-name'},
+      //     {name: 'Your Shop Category', type: 'select', autocomplete: 'off'},
+      //     {name: 'Portfolio Link', type: 'url', autocomplete: 'off'},
+      //     {name: 'Do you already have an online store?', type: 'radio', autocomplete: 'off'}
+      // ]
     };
+  },
+  components: {
+    'form-component': _formComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default,
+    'input-button': _inputButton_vue__WEBPACK_IMPORTED_MODULE_1__.default
   }
-}, "components", {
-  'form-component': _formComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default
-}));
+});
 
 /***/ }),
 
@@ -82,47 +105,63 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'sellerApplication',
+  props: {
+    formFields: {
+      type: Array,
+      required: true
+    }
+  },
   data: function data() {
-    return {
-      name: 'sellerApplication',
-      inputFields: [{
-        name: 'First Name',
-        type: 'text',
-        autocomplete: 'given-name'
-      }, {
-        name: 'Last Name',
-        type: 'text',
-        autocomplete: 'family-name'
-      }, {
-        name: 'Your Shop Category',
-        type: 'select',
-        autocomplete: 'off'
-      }, {
-        name: 'Portfolio Link',
-        type: 'url',
-        autocomplete: 'off'
-      }, {
-        name: 'Do you already have an online store?',
-        type: 'radio',
-        autocomplete: 'off'
-      }]
+    return {// inputFields: ''
     };
   },
   components: {
     'input-field': _inputField_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/inputButton.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/inputButton.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'inputButton',
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    type: {
+      type: String
+    },
+    url: {
+      type: String
+    }
+  },
+  data: function data() {
+    return {
+      width: 50 // turn into prop
+
+    };
   }
 });
 
@@ -189,13 +228,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 var default_layout = "default";
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   computed: {},
   data: function data() {
     return {
-      message: 'Hello World'
+      title: 'Share your work with us',
+      textContent: 'To ensure the the quality of our marketplace, we limit our seller community to the most qualified creators. Let our curators know why you’d be a great seller:',
+      label: 'Seller Application',
+      indexLabel: "Step 1 of 2",
+      formFields: [{
+        name: 'First Name',
+        type: 'text',
+        autocomplete: 'given-name'
+      }, {
+        name: 'Last Name',
+        type: 'text',
+        autocomplete: 'family-name'
+      }, {
+        name: 'Your Shop Category',
+        type: 'select',
+        autocomplete: 'off'
+      }, {
+        name: 'Portfolio Link',
+        type: 'url',
+        autocomplete: 'off'
+      }, {
+        name: 'Do you already have an online store?',
+        type: 'radio',
+        autocomplete: 'off'
+      }]
     };
   },
   components: {
@@ -314,6 +382,44 @@ component.options.__file = "resources/js/components/formComponent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/inputButton.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/inputButton.vue ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _inputButton_vue_vue_type_template_id_20adfebe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./inputButton.vue?vue&type=template&id=20adfebe& */ "./resources/js/components/inputButton.vue?vue&type=template&id=20adfebe&");
+/* harmony import */ var _inputButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./inputButton.vue?vue&type=script&lang=js& */ "./resources/js/components/inputButton.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _inputButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _inputButton_vue_vue_type_template_id_20adfebe___WEBPACK_IMPORTED_MODULE_0__.render,
+  _inputButton_vue_vue_type_template_id_20adfebe___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/inputButton.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/inputField.vue":
 /*!************************************************!*\
   !*** ./resources/js/components/inputField.vue ***!
@@ -420,6 +526,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/inputButton.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/inputButton.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_inputButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./inputButton.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/inputButton.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_inputButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/inputField.vue?vue&type=script&lang=js&":
 /*!*************************************************************************!*\
   !*** ./resources/js/components/inputField.vue?vue&type=script&lang=js& ***!
@@ -482,6 +603,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/inputButton.vue?vue&type=template&id=20adfebe&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/inputButton.vue?vue&type=template&id=20adfebe& ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inputButton_vue_vue_type_template_id_20adfebe___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inputButton_vue_vue_type_template_id_20adfebe___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inputButton_vue_vue_type_template_id_20adfebe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./inputButton.vue?vue&type=template&id=20adfebe& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/inputButton.vue?vue&type=template&id=20adfebe&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/inputField.vue?vue&type=template&id=73ff404a&":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/inputField.vue?vue&type=template&id=73ff404a& ***!
@@ -533,23 +670,41 @@ var render = function() {
     "div",
     { staticClass: "card" },
     [
-      _c("div", { staticClass: "card__labelRow" }, [
-        _c("span", { staticClass: "card__label" }, [
-          _vm._v("\n            " + _vm._s(_vm.label) + "\n        ")
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "card__indexLabel" }, [
-          _vm._v("\n            " + _vm._s(_vm.indexLabel) + "\n        ")
-        ])
-      ]),
+      _vm.label || _vm.indexLabel
+        ? _c("div", { staticClass: "card__labelRow" }, [
+            _vm.label
+              ? _c("span", { staticClass: "card__label" }, [
+                  _vm._v("\n            " + _vm._s(_vm.label) + "\n        ")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.indexLabel
+              ? _c("span", { staticClass: "card__indexLabel" }, [
+                  _vm._v(
+                    "\n            " + _vm._s(_vm.indexLabel) + "\n        "
+                  )
+                ])
+              : _vm._e()
+          ])
+        : _vm._e(),
       _vm._v(" "),
-      _c("h1", { staticClass: "card__heading" }, [_vm._v(_vm._s(_vm.title))]),
+      _vm.title
+        ? _c("h1", { staticClass: "card__heading" }, [
+            _vm._v(_vm._s(_vm.title))
+          ])
+        : _vm._e(),
       _vm._v(" "),
-      _c("div", { staticClass: "card__textContent" }, [
-        _c("p", [_vm._v(_vm._s(_vm.textContent))])
-      ]),
+      _vm.textContent
+        ? _c("div", { staticClass: "card__textContent" }, [
+            _c("p", [_vm._v(_vm._s(_vm.textContent))])
+          ])
+        : _vm._e(),
       _vm._v(" "),
-      _c("form-component")
+      _vm.formFields
+        ? _c("form-component", { attrs: { formFields: _vm.formFields } })
+        : _vm._e(),
+      _vm._v(" "),
+      _c("input-button", { attrs: { title: "Next" } })
     ],
     1
   )
@@ -579,16 +734,16 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "formComponent__wrapper" },
-    _vm._l(_vm.inputFields, function(inputField, x) {
+    _vm._l(_vm.formFields, function(formField, x) {
       return _c(
         "form",
         { key: x, staticClass: "formComponent__form" },
         [
           _c("input-field", {
             attrs: {
-              name: inputField.name,
-              type: inputField.type,
-              autocomplete: inputField.autocomplete
+              name: formField.name,
+              type: formField.type,
+              autocomplete: formField.autocomplete
             }
           })
         ],
@@ -596,6 +751,37 @@ var render = function() {
       )
     }),
     0
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/inputButton.vue?vue&type=template&id=20adfebe&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/inputButton.vue?vue&type=template&id=20adfebe& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "button",
+    {
+      staticClass: "inputButton",
+      attrs: { name: _vm.title, url: _vm.url, type: _vm.type }
+    },
+    [_vm._v("\n    " + _vm._s(_vm.title) + "\n    ")]
   )
 }
 var staticRenderFns = []
@@ -657,7 +843,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [_vm._v("\n\t" + _vm._s(_vm.message) + "\n\t"), _c("card")],
+    [
+      _c("card", {
+        attrs: {
+          title: _vm.title,
+          textContent: _vm.textContent,
+          label: _vm.label,
+          indexLabel: _vm.indexLabel,
+          formFields: _vm.formFields
+        }
+      })
+    ],
     1
   )
 }

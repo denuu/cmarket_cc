@@ -3,7 +3,7 @@
         <label :for='name' class='inputField__label'>{{ name }}</label>
         <input :name='name' :type='type' class='inputField' />
     </div>
-</template>;
+</template>
 
 <script>
 export default {
