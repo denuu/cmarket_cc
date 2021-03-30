@@ -1,6 +1,6 @@
 <template>
-    <button :name='title' :url='url' :type='type' class='inputButton'>
-        {{ title }}
+    <button :name='name' :url='url' :type='type' class='inputButton'>
+        {{ name }}
         <!-- <label :for='name' class='inputField__label'>{{ name }}</label>
         <input :name='name' :type='type' class='inputField' /> -->
     </button>
@@ -10,7 +10,7 @@
 export default {
     name: 'inputButton',
     props: {
-        title: {
+        name: {
             type: String,
             required: true
         },
@@ -23,7 +23,7 @@ export default {
     },
     data () {
         return {
-            width: 50 // turn into prop
+            // width: 50 // turn into prop
         }
     }
 }

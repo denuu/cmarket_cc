@@ -151,21 +151,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'inputButton',
-  props: {
-    title: {
-      type: String,
-      required: true
-    },
-    type: {
-      type: String
-    },
-    url: {
-      type: String
-    }
-  },
+  // name: 'inputButton',
+  // props: {
+  //     name: {
+  //         type: String,
+  //         required: true
+  //     },
+  //     type: {
+  //         type: String
+  //     },
+  //     url: {
+  //         type: String
+  //     }
+  // },
   components: {
     'input-button': _inputButton_vue__WEBPACK_IMPORTED_MODULE_0__.default
   },
@@ -178,13 +184,15 @@ __webpack_require__.r(__webpack_exports__);
 
       return 'Next';
     },
-    firstStep: function firstStep() {
+    isFirstStep: function isFirstStep() {
       return this.$route.name === 'firstStep';
     },
     nextStep: function nextStep() {
       if (this.$route.name === 'thirdStep') {
         submit();
       }
+
+      this.$router.push('/' + ++currentStep);
     },
     previousStep: function previousStep() {
       if (this.$route.name === 'thirdStep') {
@@ -195,9 +203,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   data: function data() {
-    return {
-      width: 50 // turn into prop
-
+    return {// width: 50 // turn into prop
     };
   },
   submit: function submit() {
@@ -228,7 +234,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'inputButton',
   props: {
-    title: {
+    name: {
       type: String,
       required: true
     },
@@ -240,9 +246,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   data: function data() {
-    return {
-      width: 50 // turn into prop
-
+    return {// width: 50 // turn into prop
     };
   }
 });
@@ -303,7 +307,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _formNavigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../formNavigation */ "./resources/js/components/formNavigation.vue");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../store */ "./resources/js/store.js");
 //
 //
 //
@@ -348,11 +351,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    'input-navigation': _formNavigation__WEBPACK_IMPORTED_MODULE_0__.default
+    'form-navigation': _formNavigation__WEBPACK_IMPORTED_MODULE_0__.default
   },
   computed: {
     firstName: {
@@ -544,12 +546,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store */ "./resources/js/store.js");
 /* harmony import */ var _views_app_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/app.vue */ "./resources/js/views/app.vue");
 
- //Main pages
+ // import router from './router'
+//Main pages
 
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_2__.default({
-  el: "#app",
+  el: '#app',
   store: _store__WEBPACK_IMPORTED_MODULE_0__.default,
+  // router,
   components: {
     App: _views_app_vue__WEBPACK_IMPORTED_MODULE_1__.default
   }
@@ -1230,39 +1234,39 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("input-button", {
+  return _c("div", [
+    _c(
+      "button",
+      {
         directives: [
           {
             name: "show",
             rawName: "v-show",
-            value: !_vm.firstStep(),
-            expression: "!firstStep()"
+            value: !_vm.isFirstStep(),
+            expression: "!isFirstStep()"
           }
         ],
-        staticClass: "inputButton inputButton--clear",
-        attrs: { name: "Back" },
-        on: { click: _vm.previousStep }
-      }),
-      _vm._v(" "),
-      _c("input-button", {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: !_vm.lastStep(),
-            expression: "!lastStep()"
+        on: {
+          click: function($event) {
+            return _vm.previousStep()
           }
-        ],
-        staticClass: "inputButton inputButton--green",
-        attrs: { name: _vm.nextButtonText() },
-        on: { click: _vm.nextStep }
-      })
-    ],
-    1
-  )
+        }
+      },
+      [_vm._v("\n        Back\n    ")]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        on: {
+          click: function($event) {
+            return _vm.nextStep()
+          }
+        }
+      },
+      [_vm._v("\n        " + _vm._s(_vm.nextButtonText()) + "\n    ")]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1290,9 +1294,9 @@ var render = function() {
     "button",
     {
       staticClass: "inputButton",
-      attrs: { name: _vm.title, url: _vm.url, type: _vm.type }
+      attrs: { name: _vm.name, url: _vm.url, type: _vm.type }
     },
-    [_vm._v("\n    " + _vm._s(_vm.title) + "\n    ")]
+    [_vm._v("\n    " + _vm._s(_vm.name) + "\n    ")]
   )
 }
 var staticRenderFns = []
@@ -1548,7 +1552,7 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c("input-navigation")
+      _c("form-navigation")
     ],
     1
   )

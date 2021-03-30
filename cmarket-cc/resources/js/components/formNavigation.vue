@@ -1,22 +1,28 @@
 <template>
     <div>
         <!-- Previous -->
-        <input-button 
+        <!-- <input-button 
             @click='previousStep' 
-            v-show='!firstStep()'
+            v-show='!isFirstStep()'
             name='Back'
             class='inputButton inputButton--clear'
         >
-        </input-button>
+        </input-button> -->
+        <button @click='previousStep()' v-show='!isFirstStep()'>
+            Back
+        </button>
 
         <!-- Next -->
-        <input-button 
+        <!-- TODO: v-show='!isLastStep()' -->
+        <!-- <input-button 
             @click='nextStep' 
-            v-show='!lastStep()'
             :name='nextButtonText()'
             class='inputButton inputButton--green'
         >
-        </input-button>
+        </input-button> -->
+        <button @click='nextStep()'>
+            {{ nextButtonText() }}
+        </button>
     </div>
 </template>
 
@@ -24,19 +30,19 @@
 import InputButton from './inputButton.vue'
 
 export default {
-    name: 'inputButton',
-    props: {
-        title: {
-            type: String,
-            required: true
-        },
-        type: {
-            type: String
-        },
-        url: {
-            type: String
-        }
-    },
+    // name: 'inputButton',
+    // props: {
+    //     name: {
+    //         type: String,
+    //         required: true
+    //     },
+    //     type: {
+    //         type: String
+    //     },
+    //     url: {
+    //         type: String
+    //     }
+    // },
     components: {
         'input-button': InputButton
     },
@@ -48,13 +54,14 @@ export default {
             }
             return 'Next'
         },
-        firstStep() {
+        isFirstStep() {
             return this.$route.name === 'firstStep'
         },
         nextStep() {
             if (this.$route.name === 'thirdStep') {
                 submit()
             }
+            this.$router.push('/' + (++currentStep))
         },
         previousStep() {
             if (this.$route.name === 'thirdStep') {
@@ -66,7 +73,7 @@ export default {
     },
     data () {
         return {
-            width: 50 // turn into prop
+            // width: 50 // turn into prop
         }
     },
     submit() {

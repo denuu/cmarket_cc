@@ -1,7 +1,6 @@
 import FirstStep from '../components/steps/stepOne.vue'
 import SecondStep from '../components/steps/stepTwo.vue'
 import ThirdStep from '../components/steps/stepThree.vue'
-import store from './store'
 
 export const routes = [
     { path: '/1', name: 'firstStep', component: FirstStep },
