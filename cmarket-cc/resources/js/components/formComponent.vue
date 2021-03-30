@@ -1,7 +1,12 @@
 <template>
     <div class='formComponent__wrapper'>
         <form class='formComponent__form' v-for='(formField, x) in formFields' :key='x'>
-            <input-field :name='formField.name' :type='formField.type' :autocomplete='formField.autocomplete'></input-field>
+            <input-field
+                :name='formField.name'
+                :type='formField.type'
+                :v-model='formField.vModel'
+                :autocomplete='formField.autocomplete'
+            ></input-field>
         </form>
     </div>
 </template>;
