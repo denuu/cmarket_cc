@@ -6,15 +6,22 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     strict: process.env.NODE_ENV !== "production",
     state: {
+        currentStep: 1,
         firstName: '',
         lastName: '',
         shopCategory: '',
         portfolioLink: '',
         existingStore: '',
         existingStoreUrls: '',
-        email: ''
+        email: '',
+        qualityPespective: '',
+        experienceLevel: '',
+        businessMarketing: ''
     },
     mutations: {
+        setCurrentStep(state, payload) {
+            state.currentStep = payload.currentStep;
+        },
         setFirstName(state, payload) {
             state.firstName = payload.firstName;
         },
@@ -35,6 +42,15 @@ export default new Vuex.Store({
         },
         setEmail(state, payload) {
             state.email = payload.email;
+        },
+        setQualityPespective(state, payload) {
+            state.qualityPespective = payload.qualityPespective;
+        },
+        setExperienceLevel(state, payload) {
+            state.experienceLevel = payload.experienceLevel;
+        },
+        setBusinessMarketing(state, payload) {
+            state.businessMarketing = payload.businessMarketing;
         }
     }
 });

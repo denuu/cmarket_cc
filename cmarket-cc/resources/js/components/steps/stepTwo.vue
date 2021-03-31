@@ -19,25 +19,32 @@
         </div>
 
         <!-- Form -->
-        <label for='firstName'>First Name</label>
-        <input type='text' id='firstName' name='firstName' v-model='firstName' autocomplete='given-name'/>
+        <label for='qualityPespective'>When creating products to sell, which best describes your perspective on quality?</label>
+        <select type='text' id='qualityPespective' name='qualityPespective' v-model='qualityPespective' autocomplete='off'>
+			<option value='5'>I don’t care what it takes, my products are the highest quality possible.</option>
+			<option value='4'>I put in enough effort to make my product pretty high quality, but at some point my time is better spent elsewhere.</option>
+			<option value='3'>I try to get quality products out quickly, even if I need to take a shortcut now and then.</option>
+			<option value='2'>I spend the minimum amount of time & effort it takes to create products that are acceptable quality.</option>
+			<option value='1'>Quantity is more important to me than quality.</option>
+		</select>
 
-        <label for='lastName'>Last Name</label>
-        <input type='text' id='lastName' name='lastName' v-model='lastName' autocomplete='family-name'/>
+        <label for='experienceLevel'>How would you describe your experience level as an online seller?</label>
+        <select type='text' id='experienceLevel' name='experienceLevel' v-model='experienceLevel' autocomplete='off'>
+			<option value='5'>I sell on multiple marketplaces and through my own website.</option>
+			<option value='4'>I have experience selling through only my own website.</option>
+			<option value='3'>I have experience selling through multiple marketplaces.</option>
+			<option value='2'>I have experience selling through one online marketplace.</option>
+			<option value='1'>I’m new to selling creative products online.</option>
+		</select>
 
-        <label for='shopCategory' autocomplete='off'>Your Shop Category</label>
-        <input type='text' id='shopCategory' name='shopCategory' v-model='shopCategory'/>
+        <label for='businessMarketing' autocomplete='off'>How would you describe your understanding of business and marketing?</label>
+        <select type='text' id='businessMarketing' name='businessMarketing' v-model='businessMarketing' autocomplete='off'>
+			<option value='4'>I have an extensive background in business and/or marketing.</option>
+			<option value='3'>I’m familiar with some skills & techniques, but I’m not sure how to apply them when selling my creative work.</option>
+			<option value='2'>I’m vaguely aware of basic business & marketing concepts.</option>
+			<option value='1'>I’m not interested in understanding business & marketing.</option>
+		</select>
         
-        <label for='portfolioLink' autocomplete='off'>Portfolio Link</label>
-        <input type='url' id='portfolioLink' name='portfolioLink' v-model='portfolioLink'/>
-
-        <!-- TODO radio. -->
-        <label for='existingStore'>Do you already have an online store?</label>
-        <input type='text' id='existingStore' name='existingStore' v-model='existingStore'/>
-
-        <label for='existingStoreUrls' autocomplete='off'>Online stores I sell on today</label>
-        <input type='textarea' id='existingStoreUrls' name='existingStoreUrls' v-model='existingStoreUrls'/>
-
         <form-navigation></form-navigation>
     </div>
 </template>
@@ -50,61 +57,37 @@ export default {
         'form-navigation': formNavigation
     },
     computed: {
-		firstName: {
+		qualityPespective: {
 			get() {
-				return this.$store.state.firstName
+				return this.$store.state.qualityPespective
 			},
 			set(value) {
-				this.$store.commit('setFirstName', {firstName: value})
+				this.$store.commit('setQualityPespective', {qualityPespective: value})
 			}
 		},
-		lastName: {
+		experienceLevel: {
 			get() {
-				return this.$store.state.lastName
+				return this.$store.state.experienceLevel
 			},
 			set(value) {
-				this.$store.commit('setLastName', {lastName: value})
+				this.$store.commit('setExperienceLevel', {experienceLevel: value})
 			}
 		},
-		shopCategory: {
+		businessMarketing: {
 			get() {
-				return this.$store.state.shopCategory
+				return this.$store.state.businessMarketing
 			},
 			set(value) {
-				this.$store.commit('setShopCategory', {shopCategory: value})
-			}
-		},
-		portfolioLink: {
-			get() {
-				return this.$store.state.portfolioLink
-			},
-			set(value) {
-				this.$store.commit('setPortfolioLink', {portfolioLink: value})
-			}
-		},
-		existingStore: {
-			get() {
-				return this.$store.state.existingStore
-			},
-			set(value) {
-				this.$store.commit('setExistingStore', {existingStore: value})
-			}
-		},
-		existingStoreUrls: {
-			get() {
-				return this.$store.state.existingStoreUrls
-			},
-			set(value) {
-				this.$store.commit('setExistingStoreUrls', {existingStoreUrls: value})
+				this.$store.commit('setBusinessMarketing', {businessMarketing: value})
 			}
 		}
 	},
     data() {
         return {
-            title: 'Share your work with us',
-            textContent: 'To ensure the the quality of our marketplace, we limit our seller community to the most qualified creators. Let our curators know why you’d be a great seller:',
+            title: 'Tell us a little about yourself',
+            textContent: 'Your answers will help us provide you with a more personalized experience as a seller!',
             label: 'Seller Application',
-            indexLabel: `Step 1 of 2`
+            indexLabel: `Step 2 of 2`
         }
     }
 }

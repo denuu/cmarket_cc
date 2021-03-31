@@ -2,25 +2,25 @@
     <div>
         <!-- Previous -->
         <!-- <input-button 
-            @click='previousStep' 
+            @click='goBack' 
             v-show='!isFirstStep()'
             name='Back'
             class='inputButton inputButton--clear'
         >
         </input-button> -->
-        <button @click='previousStep()' v-show='!isFirstStep()'>
+        <button @click='goBack()' v-show='!isFirstStep() && !isSubmitted()'>
             Back
         </button>
 
         <!-- Next -->
         <!-- TODO: v-show='!isLastStep()' -->
         <!-- <input-button 
-            @click='nextStep' 
+            @click='goForward' 
             :name='nextButtonText()'
             class='inputButton inputButton--green'
         >
         </input-button> -->
-        <button @click='nextStep()'>
+        <button @click='goForward()' v-show='!isSubmitted()'>
             {{ nextButtonText() }}
         </button>
     </div>
@@ -33,7 +33,7 @@ export default {
     methods: {
         // TODO: STEP TWO SUBMITS, STEP THREE IS SUCCESS.
         nextButtonText() {
-            if (this.$route.name === 'thirdStep') {
+            if (this.$route.name === 'secondStep') {
                 return 'Submit Application'
             }
             return 'Next'
@@ -41,22 +41,29 @@ export default {
         isFirstStep() {
             return this.$route.name === 'firstStep'
         },
-        nextStep() {
-            if (this.$route.name === 'thirdStep') {
-                submit()
-            }
-            this.$router.push('/' + (++currentStep))
+        isSubmitted() {
+            return this.$route.name === 'thirdStep'
         },
-        previousStep() {
+        goForward() {
+            if (this.$route.path === '/') {
+                this.$router.push('/2')
+            } else if (this.$route.path === '/2') {
+                this.submit()
+            }
+        },
+        goBack() {
             if (this.$route.name === 'thirdStep') {
                 this.$router.push('/2')
             } else if (this.$route.name === 'secondStep') {
-                this.$router.push('/1')
+                this.$router.push('/')
             }
+        },
+        submit() {
+            // const data = new FormData()
+            // data.append('firstName', this.$store.firstName) // TODO Use getter fn.
+            alert('This aint it, chief')
+            this.$router.push('/3')
         }
-    },
-    submit() {
-        alert('This aint it, chief')
     }
     // name: 'inputButton',
     // props: {

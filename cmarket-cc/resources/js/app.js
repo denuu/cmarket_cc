@@ -11,3 +11,5 @@ const app = new Vue({
     router,
     components: { App }
 });
+
+// router.replace('/1')

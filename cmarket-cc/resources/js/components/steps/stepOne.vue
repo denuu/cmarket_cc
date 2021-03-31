@@ -50,6 +50,14 @@ export default {
         'form-navigation': formNavigation
     },
     computed: {
+        currentStep: {
+            get() {
+                return this.$store.state.currentStep
+            },
+            set(value) {
+                this.$store.commit('setCurrentStep', {currentStep: value})
+            }
+        },
 		firstName: {
 			get() {
 				return this.$store.state.firstName
