@@ -27,25 +27,9 @@
 </template>
 
 <script>
-import InputButton from './inputButton.vue'
+// import InputButton from './inputButton.vue'
 
 export default {
-    // name: 'inputButton',
-    // props: {
-    //     name: {
-    //         type: String,
-    //         required: true
-    //     },
-    //     type: {
-    //         type: String
-    //     },
-    //     url: {
-    //         type: String
-    //     }
-    // },
-    components: {
-        'input-button': InputButton
-    },
     methods: {
         // TODO: STEP TWO SUBMITS, STEP THREE IS SUCCESS.
         nextButtonText() {
@@ -71,13 +55,29 @@ export default {
             }
         }
     },
-    data () {
-        return {
-            // width: 50 // turn into prop
-        }
-    },
     submit() {
         alert('This aint it, chief')
     }
+    // name: 'inputButton',
+    // props: {
+    //     name: {
+    //         type: String,
+    //         required: true
+    //     },
+    //     type: {
+    //         type: String
+    //     },
+    //     url: {
+    //         type: String
+    //     }
+    // },
+    // components: {
+    //     'input-button': InputButton
+    // },
+    // data () {
+    //     return {
+    //         // width: 50 // turn into prop
+    //     }
+    // },
 }
 </script>
