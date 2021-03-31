@@ -1,9 +1,15 @@
-import Vue from "vue";
+import Vue from 'vue'
+import store from './store'
+import router from './router'
 
 //Main pages
-import App from "./views/app.vue";
+import App from './views/app.vue'
 
 const app = new Vue({
-    el: "#app",
+    el: '#app',
+    store,
+    router,
     components: { App }
 });
+
+// router.replace('/1') // TODO: To redirect, or not to redirect?
