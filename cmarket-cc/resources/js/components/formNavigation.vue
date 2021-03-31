@@ -31,7 +31,6 @@
 
 export default {
     methods: {
-        // TODO: STEP TWO SUBMITS, STEP THREE IS SUCCESS.
         nextButtonText() {
             if (this.$route.name === 'secondStep') {
                 return 'Submit Application'
@@ -59,32 +58,9 @@ export default {
             }
         },
         submit() {
-            // const data = new FormData()
-            // data.append('firstName', this.$store.firstName) // TODO Use getter fn.
             alert('This aint it, chief')
             this.$router.push('/3')
         }
     }
-    // name: 'inputButton',
-    // props: {
-    //     name: {
-    //         type: String,
-    //         required: true
-    //     },
-    //     type: {
-    //         type: String
-    //     },
-    //     url: {
-    //         type: String
-    //     }
-    // },
-    // components: {
-    //     'input-button': InputButton
-    // },
-    // data () {
-    //     return {
-    //         // width: 50 // turn into prop
-    //     }
-    // },
 }
 </script>
