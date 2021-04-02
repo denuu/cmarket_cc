@@ -499,7 +499,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     'form-navigation': _formNavigation__WEBPACK_IMPORTED_MODULE_0__.default
   },
-  computed: _objectSpread({}, (0,vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.mapFields)(['form.qualityPespective', 'form.experienceLevel', 'form.businessMarketing'])),
+  computed: _objectSpread({}, (0,vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.mapFields)(['form.qualityPerspective', 'form.experienceLevel', 'form.businessMarketing'])),
   data: function data() {
     return {
       title: 'Tell us a little about yourself',
@@ -653,8 +653,8 @@ vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_2__.d
       contentOwner: '',
       existingStore: '',
       existingStoreUrls: '',
-      email: '',
-      qualityPespective: '',
+      // email: '',
+      qualityPerspective: '',
       experienceLevel: '',
       businessMarketing: ''
     }
@@ -1970,7 +1970,7 @@ var render = function() {
           ])
         : _vm._e(),
       _vm._v(" "),
-      _c("label", { attrs: { for: "qualityPespective" } }, [
+      _c("label", { attrs: { for: "qualityPerspective" } }, [
         _vm._v(
           "When creating products to sell, which best describes your perspective on quality?"
         )
@@ -1983,14 +1983,14 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.qualityPespective,
-              expression: "qualityPespective"
+              value: _vm.qualityPerspective,
+              expression: "qualityPerspective"
             }
           ],
           attrs: {
             type: "text",
-            id: "qualityPespective",
-            name: "qualityPespective",
+            id: "qualityPerspective",
+            name: "qualityPerspective",
             autocomplete: "off"
           },
           on: {
@@ -2003,7 +2003,7 @@ var render = function() {
                   var val = "_value" in o ? o._value : o.value
                   return val
                 })
-              _vm.qualityPespective = $event.target.multiple
+              _vm.qualityPerspective = $event.target.multiple
                 ? $$selectedVal
                 : $$selectedVal[0]
             }

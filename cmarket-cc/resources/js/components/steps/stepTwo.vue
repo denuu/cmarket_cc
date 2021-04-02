@@ -19,8 +19,8 @@
         </div>
 
         <!-- Form -->
-        <label for='qualityPespective'>When creating products to sell, which best describes your perspective on quality?</label>
-        <select type='text' id='qualityPespective' name='qualityPespective' v-model='qualityPespective' autocomplete='off'>
+        <label for='qualityPerspective'>When creating products to sell, which best describes your perspective on quality?</label>
+        <select type='text' id='qualityPerspective' name='qualityPerspective' v-model='qualityPerspective' autocomplete='off'>
 			<option value='5'>I don’t care what it takes, my products are the highest quality possible.</option>
 			<option value='4'>I put in enough effort to make my product pretty high quality, but at some point my time is better spent elsewhere.</option>
 			<option value='3'>I try to get quality products out quickly, even if I need to take a shortcut now and then.</option>
@@ -59,7 +59,7 @@ export default {
     },
     computed: {
 		...mapFields([
-			'form.qualityPespective',
+			'form.qualityPerspective',
 			'form.experienceLevel',
 			'form.businessMarketing'
         ])
