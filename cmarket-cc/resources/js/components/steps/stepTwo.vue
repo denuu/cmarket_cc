@@ -51,36 +51,18 @@
 
 <script>
 import formNavigation from '../formNavigation'
+import { mapFields } from 'vuex-map-fields'
 
 export default {
     components: {
         'form-navigation': formNavigation
     },
     computed: {
-		qualityPespective: {
-			get() {
-				return this.$store.state.qualityPespective
-			},
-			set(value) {
-				this.$store.commit('setQualityPespective', {qualityPespective: value})
-			}
-		},
-		experienceLevel: {
-			get() {
-				return this.$store.state.experienceLevel
-			},
-			set(value) {
-				this.$store.commit('setExperienceLevel', {experienceLevel: value})
-			}
-		},
-		businessMarketing: {
-			get() {
-				return this.$store.state.businessMarketing
-			},
-			set(value) {
-				this.$store.commit('setBusinessMarketing', {businessMarketing: value})
-			}
-		}
+		...mapFields([
+			'form.qualityPespective',
+			'form.experienceLevel',
+			'form.businessMarketing'
+        ])
 	},
     data() {
         return {

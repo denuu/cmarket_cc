@@ -58,6 +58,7 @@ export default {
             }
         },
         submit() {
+            console.log(this.$store.state.form)
             alert('This aint it, chief')
             this.$router.push('/3')
         }

@@ -159,7 +159,6 @@ __webpack_require__.r(__webpack_exports__);
 // import InputButton from './inputButton.vue'
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
-    // TODO: STEP TWO SUBMITS, STEP THREE IS SUCCESS.
     nextButtonText: function nextButtonText() {
       if (this.$route.name === 'secondStep') {
         return 'Submit Application';
@@ -188,33 +187,11 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     submit: function submit() {
-      // const data = new FormData()
-      // data.append('firstName', this.$store.firstName) // TODO Use getter fn.
+      console.log(this.$store.state.form);
       alert('This aint it, chief');
       this.$router.push('/3');
     }
-  } // name: 'inputButton',
-  // props: {
-  //     name: {
-  //         type: String,
-  //         required: true
-  //     },
-  //     type: {
-  //         type: String
-  //     },
-  //     url: {
-  //         type: String
-  //     }
-  // },
-  // components: {
-  //     'input-button': InputButton
-  // },
-  // data () {
-  //     return {
-  //         // width: 50 // turn into prop
-  //     }
-  // },
-
+  }
 });
 
 /***/ }),
@@ -313,6 +290,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _formNavigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../formNavigation */ "./resources/js/components/formNavigation.vue");
+/* harmony import */ var vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-map-fields */ "./node_modules/vuex-map-fields/dist/index.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -358,82 +363,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     'form-navigation': _formNavigation__WEBPACK_IMPORTED_MODULE_0__.default
   },
-  computed: {
-    currentStep: {
-      get: function get() {
-        return this.$store.state.currentStep;
-      },
-      set: function set(value) {
-        this.$store.commit('setCurrentStep', {
-          currentStep: value
-        });
-      }
-    },
-    firstName: {
-      get: function get() {
-        return this.$store.state.firstName;
-      },
-      set: function set(value) {
-        this.$store.commit('setFirstName', {
-          firstName: value
-        });
-      }
-    },
-    lastName: {
-      get: function get() {
-        return this.$store.state.lastName;
-      },
-      set: function set(value) {
-        this.$store.commit('setLastName', {
-          lastName: value
-        });
-      }
-    },
-    shopCategory: {
-      get: function get() {
-        return this.$store.state.shopCategory;
-      },
-      set: function set(value) {
-        this.$store.commit('setShopCategory', {
-          shopCategory: value
-        });
-      }
-    },
-    portfolioLink: {
-      get: function get() {
-        return this.$store.state.portfolioLink;
-      },
-      set: function set(value) {
-        this.$store.commit('setPortfolioLink', {
-          portfolioLink: value
-        });
-      }
-    },
-    existingStore: {
-      get: function get() {
-        return this.$store.state.existingStore;
-      },
-      set: function set(value) {
-        this.$store.commit('setExistingStore', {
-          existingStore: value
-        });
-      }
-    },
-    existingStoreUrls: {
-      get: function get() {
-        return this.$store.state.existingStoreUrls;
-      },
-      set: function set(value) {
-        this.$store.commit('setExistingStoreUrls', {
-          existingStoreUrls: value
-        });
-      }
-    }
-  },
+  computed: _objectSpread({}, (0,vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.mapFields)(['form.currentStep', 'form.firstName', 'form.lastName', 'form.shopCategory', 'form.portfolioLink', 'form.contentOwner', 'form.existingStore', 'form.existingStoreUrls'])),
   data: function data() {
     return {
       title: 'Share your work with us',
@@ -500,6 +435,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _formNavigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../formNavigation */ "./resources/js/components/formNavigation.vue");
+/* harmony import */ var vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-map-fields */ "./node_modules/vuex-map-fields/dist/index.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -552,42 +494,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     'form-navigation': _formNavigation__WEBPACK_IMPORTED_MODULE_0__.default
   },
-  computed: {
-    qualityPespective: {
-      get: function get() {
-        return this.$store.state.qualityPespective;
-      },
-      set: function set(value) {
-        this.$store.commit('setQualityPespective', {
-          qualityPespective: value
-        });
-      }
-    },
-    experienceLevel: {
-      get: function get() {
-        return this.$store.state.experienceLevel;
-      },
-      set: function set(value) {
-        this.$store.commit('setExperienceLevel', {
-          experienceLevel: value
-        });
-      }
-    },
-    businessMarketing: {
-      get: function get() {
-        return this.$store.state.businessMarketing;
-      },
-      set: function set(value) {
-        this.$store.commit('setBusinessMarketing', {
-          businessMarketing: value
-        });
-      }
-    }
-  },
+  computed: _objectSpread({}, (0,vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.mapFields)(['form.qualityPespective', 'form.experienceLevel', 'form.businessMarketing'])),
   data: function data() {
     return {
       title: 'Tell us a little about yourself',
@@ -622,86 +534,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-// let formData = {{ }}
 
 
 
 
 var default_layout = "default";
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  // computed: {
-  // 	firstName: {
-  // 		get() {
-  // 			return this.$store.state.firstName
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setFirstName', {firstName: value})
-  // 		}
-  // 	},
-  // 	lastName: {
-  // 		get() {
-  // 			return this.$store.state.lastName
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setLastName', {lastName: value})
-  // 		}
-  // 	},
-  // 	shopCategory: {
-  // 		get() {
-  // 			return this.$store.state.shopCategory
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setShopCategory', {shopCategory: value})
-  // 		}
-  // 	},
-  // 	portfolioLink: {
-  // 		get() {
-  // 			return this.$store.state.portfolioLink
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setPortfolioLink', {portfolioLink: value})
-  // 		}
-  // 	},
-  // 	existingStore: {
-  // 		get() {
-  // 			return this.$store.state.existingStore
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setExistingStore', {existingStore: value})
-  // 		}
-  // 	},
-  // 	existingStoreUrls: {
-  // 		get() {
-  // 			return this.$store.state.existingStoreUrls
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setExistingStoreUrls', {existingStoreUrls: value})
-  // 		}
-  // 	}
-  // },
-  data: function data() {
-    return {
-      title: 'Share your work with us',
-      textContent: 'To ensure the the quality of our marketplace, we limit our seller community to the most qualified creators. Let our curators know why you’d be a great seller:',
-      label: 'Seller Application',
-      indexLabel: "Step 1 of 2" // formFields: [
-      //     {name: 'First Name', type: 'text', autocomplete: 'given-name', vModel: 'firstName'},
-      //     {name: 'Last Name', type: 'text', autocomplete: 'family-name', vModel: 'lastName'},
-      //     {name: 'Your Shop Category', type: 'select', autocomplete: 'off', vModel: 'shopCategory'},
-      //     {name: 'Portfolio Link', type: 'url', autocomplete: 'off', vModel: 'portfolioLink'},
-      //     {name: 'Do you already have an online store?', type: 'radio', autocomplete: 'off', vModel: 'existingStore'},
-      //     {name: 'Online stores I sell on today', type: 'textarea', autocomplete: 'off', vModel: 'existingStoreUrls'},
-      // ]
-
-    };
-  },
   components: {
     'card': _components_card_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     'step-one': _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_1__.default,
@@ -735,7 +573,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_3__.default({
   components: {
     App: _views_app_vue__WEBPACK_IMPORTED_MODULE_2__.default
   }
-}); // router.replace('/1')
+}); // router.replace('/1') // TODO: To redirect, or not to redirect?
 
 /***/ }),
 
@@ -797,59 +635,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-map-fields */ "./node_modules/vuex-map-fields/dist/index.esm.js");
 
 
-vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_1__.default);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_1__.default.Store({
+
+vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_2__.default);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_2__.default.Store({
   strict: "development" !== "production",
   state: {
-    currentStep: 1,
-    firstName: '',
-    lastName: '',
-    shopCategory: '',
-    portfolioLink: '',
-    existingStore: '',
-    existingStoreUrls: '',
-    email: '',
-    qualityPespective: '',
-    experienceLevel: '',
-    businessMarketing: ''
+    form: {
+      currentStep: 1,
+      firstName: '',
+      lastName: '',
+      shopCategory: '',
+      portfolioLink: '',
+      contentOwner: '',
+      existingStore: '',
+      existingStoreUrls: '',
+      email: '',
+      qualityPespective: '',
+      experienceLevel: '',
+      businessMarketing: ''
+    }
+  },
+  getters: {
+    getField: vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.getField
   },
   mutations: {
-    setCurrentStep: function setCurrentStep(state, payload) {
-      state.currentStep = payload.currentStep;
-    },
-    setFirstName: function setFirstName(state, payload) {
-      state.firstName = payload.firstName;
-    },
-    setLastName: function setLastName(state, payload) {
-      state.lastName = payload.lastName;
-    },
-    setShopCategory: function setShopCategory(state, payload) {
-      state.shopCategory = payload.shopCategory;
-    },
-    setPortfolioLink: function setPortfolioLink(state, payload) {
-      state.portfolioLink = payload.portfolioLink;
-    },
-    setExistingStore: function setExistingStore(state, payload) {
-      state.existingStore = payload.existingStore;
-    },
-    setExistingStoreUrls: function setExistingStoreUrls(state, payload) {
-      state.existingStoreUrls = payload.existingStoreUrls;
-    },
-    setEmail: function setEmail(state, payload) {
-      state.email = payload.email;
-    },
-    setQualityPespective: function setQualityPespective(state, payload) {
-      state.qualityPespective = payload.qualityPespective;
-    },
-    setExperienceLevel: function setExperienceLevel(state, payload) {
-      state.experienceLevel = payload.experienceLevel;
-    },
-    setBusinessMarketing: function setBusinessMarketing(state, payload) {
-      state.businessMarketing = payload.businessMarketing;
-    }
+    updateField: vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.updateField
   }
 }));
 
@@ -1837,26 +1651,50 @@ var render = function() {
         _vm._v("Your Shop Category")
       ]),
       _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.shopCategory,
-            expression: "shopCategory"
-          }
-        ],
-        attrs: { type: "text", id: "shopCategory", name: "shopCategory" },
-        domProps: { value: _vm.shopCategory },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.shopCategory,
+              expression: "shopCategory"
             }
-            _vm.shopCategory = $event.target.value
+          ],
+          attrs: { type: "text", id: "shopCategory", name: "shopCategory" },
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.shopCategory = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
           }
-        }
-      }),
+        },
+        [
+          _c("option", [_vm._v("Graphics")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("Fonts")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("Templates")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("Add-ons")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("Photos")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("Web Themes")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("3D")])
+        ]
+      ),
       _vm._v(" "),
       _c("label", { attrs: { for: "portfolioLink", autocomplete: "off" } }, [
         _vm._v("Portfolio Link")
@@ -1883,6 +1721,58 @@ var render = function() {
         }
       }),
       _vm._v(" "),
+      _vm.portfolioLink
+        ? _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.contentOwner,
+                expression: "contentOwner"
+              }
+            ],
+            attrs: {
+              type: "checkbox",
+              id: "contentOwner",
+              name: "contentOwner"
+            },
+            domProps: {
+              checked: Array.isArray(_vm.contentOwner)
+                ? _vm._i(_vm.contentOwner, null) > -1
+                : _vm.contentOwner
+            },
+            on: {
+              change: function($event) {
+                var $$a = _vm.contentOwner,
+                  $$el = $event.target,
+                  $$c = $$el.checked ? true : false
+                if (Array.isArray($$a)) {
+                  var $$v = null,
+                    $$i = _vm._i($$a, $$v)
+                  if ($$el.checked) {
+                    $$i < 0 && (_vm.contentOwner = $$a.concat([$$v]))
+                  } else {
+                    $$i > -1 &&
+                      (_vm.contentOwner = $$a
+                        .slice(0, $$i)
+                        .concat($$a.slice($$i + 1)))
+                  }
+                } else {
+                  _vm.contentOwner = $$c
+                }
+              }
+            }
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.portfolioLink
+        ? _c("label", { attrs: { for: "contentnOwner" } }, [
+            _vm._v(
+              "Yes, I confirm that the content I submit is authored by me."
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
       _c("label", { attrs: { for: "existingStore" } }, [
         _vm._v("Do you already have an online store?")
       ]),
@@ -1896,48 +1786,81 @@ var render = function() {
             expression: "existingStore"
           }
         ],
-        attrs: { type: "text", id: "existingStore", name: "existingStore" },
-        domProps: { value: _vm.existingStore },
+        attrs: {
+          type: "radio",
+          id: "existingStoreYes",
+          name: "existingStoreYes",
+          value: "yes"
+        },
+        domProps: { checked: _vm._q(_vm.existingStore, "yes") },
         on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.existingStore = $event.target.value
+          change: function($event) {
+            _vm.existingStore = "yes"
           }
         }
       }),
       _vm._v(" "),
-      _c(
-        "label",
-        { attrs: { for: "existingStoreUrls", autocomplete: "off" } },
-        [_vm._v("Online stores I sell on today")]
-      ),
+      _c("label", { attrs: { for: "existingStoreYes" } }, [_vm._v("Yes")]),
       _vm._v(" "),
       _c("input", {
         directives: [
           {
             name: "model",
             rawName: "v-model",
-            value: _vm.existingStoreUrls,
-            expression: "existingStoreUrls"
+            value: _vm.existingStore,
+            expression: "existingStore"
           }
         ],
         attrs: {
-          type: "textarea",
-          id: "existingStoreUrls",
-          name: "existingStoreUrls"
+          type: "radio",
+          id: "existingStoreNo",
+          name: "existingStoreNo",
+          value: "no"
         },
-        domProps: { value: _vm.existingStoreUrls },
+        domProps: { checked: _vm._q(_vm.existingStore, "no") },
         on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.existingStoreUrls = $event.target.value
+          change: function($event) {
+            _vm.existingStore = "no"
           }
         }
       }),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "existingStoreNo" } }, [_vm._v("No")]),
+      _vm._v(" "),
+      _vm.existingStore === "yes"
+        ? _c(
+            "label",
+            { attrs: { for: "existingStoreUrls", autocomplete: "off" } },
+            [_vm._v("Online stores I sell on today")]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.existingStore === "yes"
+        ? _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.existingStoreUrls,
+                expression: "existingStoreUrls"
+              }
+            ],
+            attrs: {
+              type: "textarea",
+              id: "existingStoreUrls",
+              name: "existingStoreUrls"
+            },
+            domProps: { value: _vm.existingStoreUrls },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.existingStoreUrls = $event.target.value
+              }
+            }
+          })
+        : _vm._e(),
       _vm._v(" "),
       _c("form-navigation")
     ],
@@ -17547,6 +17470,222 @@ function getOuterHTML (el) {
 Vue.compile = compileToFunctions;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Vue);
+
+
+/***/ }),
+
+/***/ "./node_modules/vuex-map-fields/dist/index.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vuex-map-fields/dist/index.esm.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createHelpers": () => (/* binding */ createHelpers),
+/* harmony export */   "getField": () => (/* binding */ getField),
+/* harmony export */   "mapFields": () => (/* binding */ mapFields),
+/* harmony export */   "mapMultiRowFields": () => (/* binding */ mapMultiRowFields),
+/* harmony export */   "updateField": () => (/* binding */ updateField)
+/* harmony export */ });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function arrayToObject() {
+  var fields = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  return fields.reduce(function (prev, path) {
+    var key = path.split(".").slice(-1)[0];
+
+    if (prev[key]) {
+      throw new Error("The key `".concat(key, "` is already in use."));
+    } // eslint-disable-next-line no-param-reassign
+
+
+    prev[key] = path;
+    return prev;
+  }, {});
+}
+
+function objectEntries(obj) {
+  return Object.keys(obj).map(function (key) {
+    return [key, obj[key]];
+  });
+}
+
+function normalizeNamespace(fn) {
+  return function () {
+    for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
+      params[_key] = arguments[_key];
+    }
+
+    // eslint-disable-next-line prefer-const
+    var _ref = typeof params[0] === "string" ? [].concat(params) : [""].concat(params),
+        _ref2 = _slicedToArray(_ref, 4),
+        namespace = _ref2[0],
+        map = _ref2[1],
+        getterType = _ref2[2],
+        mutationType = _ref2[3];
+
+    if (namespace.length && namespace.charAt(namespace.length - 1) !== "/") {
+      namespace += "/";
+    }
+
+    getterType = "".concat(namespace).concat(getterType || "getField");
+    mutationType = "".concat(namespace).concat(mutationType || "updateField");
+    return fn(namespace, map, getterType, mutationType);
+  };
+}
+
+function getField(state) {
+  return function (path) {
+    return path.split(/[.[\]]+/).reduce(function (prev, key) {
+      return prev[key];
+    }, state);
+  };
+}
+function updateField(state, _ref3) {
+  var path = _ref3.path,
+      value = _ref3.value;
+  path.split(/[.[\]]+/).reduce(function (prev, key, index, array) {
+    if (array.length === index + 1) {
+      // eslint-disable-next-line no-param-reassign
+      prev[key] = value;
+    }
+
+    return prev[key];
+  }, state);
+}
+var mapFields = normalizeNamespace(function (namespace, fields, getterType, mutationType) {
+  var fieldsObject = Array.isArray(fields) ? arrayToObject(fields) : fields;
+  return Object.keys(fieldsObject).reduce(function (prev, key) {
+    var path = fieldsObject[key];
+    var field = {
+      get: function get() {
+        return this.$store.getters[getterType](path);
+      },
+      set: function set(value) {
+        this.$store.commit(mutationType, {
+          path: path,
+          value: value
+        });
+      }
+    }; // eslint-disable-next-line no-param-reassign
+
+    prev[key] = field;
+    return prev;
+  }, {});
+});
+var mapMultiRowFields = normalizeNamespace(function (namespace, paths, getterType, mutationType) {
+  var pathsObject = Array.isArray(paths) ? arrayToObject(paths) : paths;
+  return Object.keys(pathsObject).reduce(function (entries, key) {
+    var path = pathsObject[key]; // eslint-disable-next-line no-param-reassign
+
+    entries[key] = {
+      get: function get() {
+        var store = this.$store;
+        var rows = objectEntries(store.getters[getterType](path));
+        return rows.map(function (fieldsObject) {
+          return Object.keys(fieldsObject[1]).reduce(function (prev, fieldKey) {
+            var fieldPath = "".concat(path, "[").concat(fieldsObject[0], "].").concat(fieldKey);
+            return Object.defineProperty(prev, fieldKey, {
+              get: function get() {
+                return store.getters[getterType](fieldPath);
+              },
+              set: function set(value) {
+                store.commit(mutationType, {
+                  path: fieldPath,
+                  value: value
+                });
+              }
+            });
+          }, {});
+        });
+      }
+    };
+    return entries;
+  }, {});
+});
+var createHelpers = function createHelpers(_ref4) {
+  var _ref5;
+
+  var getterType = _ref4.getterType,
+      mutationType = _ref4.mutationType;
+  return _ref5 = {}, _defineProperty(_ref5, getterType, getField), _defineProperty(_ref5, mutationType, updateField), _defineProperty(_ref5, "mapFields", normalizeNamespace(function (namespace, fields) {
+    return mapFields(namespace, fields, getterType, mutationType);
+  })), _defineProperty(_ref5, "mapMultiRowFields", normalizeNamespace(function (namespace, paths) {
+    return mapMultiRowFields(namespace, paths, getterType, mutationType);
+  })), _ref5;
+};
+
+
 
 
 /***/ }),
