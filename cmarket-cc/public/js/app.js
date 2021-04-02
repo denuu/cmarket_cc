@@ -253,11 +253,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'inputField',
   // props: ['name', 'type', 'autocomplete'],
   props: {
     name: {
+      type: String
+    },
+    label: {
       type: String
     },
     type: {
@@ -267,6 +300,15 @@ __webpack_require__.r(__webpack_exports__);
     autocomplete: {
       type: String,
       "default": 'off'
+    },
+    width: {
+      type: Number,
+      "default": 100
+    },
+    items: {
+      type: Array // select options
+      // radio options
+
     }
   },
   data: function data() {
@@ -1522,17 +1564,253 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "inputField__wrapper" }, [
-    _c(
-      "label",
-      { staticClass: "inputField__label", attrs: { for: _vm.name } },
-      [_vm._v(_vm._s(_vm.name))]
-    ),
+  return _c("div", [
+    _vm.type === "text" || _vm.type === "name" || _vm.type === "textarea"
+      ? _c("div", { staticClass: "inputField__wrapper" }, [
+          _c(
+            "label",
+            { staticClass: "inputField__label", attrs: { for: _vm.name } },
+            [_vm._v(_vm._s(_vm.label))]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "inputField",
+            attrs: {
+              id: _vm.name,
+              name: _vm.name,
+              type: _vm.type,
+              "v-model": _vm.name
+            }
+          })
+        ])
+      : _vm._e(),
     _vm._v(" "),
-    _c("input", {
-      staticClass: "inputField",
-      attrs: { name: _vm.name, type: _vm.type }
-    })
+    _vm.type === "select"
+      ? _c("div", { staticClass: "inputField__wrapper" }, [
+          _c(
+            "label",
+            { staticClass: "inputField__label", attrs: { for: _vm.name } },
+            [_vm._v(_vm._s(_vm.label))]
+          ),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              staticClass: "inputField",
+              attrs: { id: _vm.name, name: _vm.name, "v-model": _vm.name }
+            },
+            _vm._l(_vm.items, function(item) {
+              return _c(
+                "option",
+                { key: item.title, domProps: { value: item.value } },
+                [
+                  _vm._v(
+                    "\n                " + _vm._s(item.title) + "\n            "
+                  )
+                ]
+              )
+            }),
+            0
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.type === "checkbox"
+      ? _c("div", { staticClass: "inputField__wrapper" }, [
+          _vm.type === "checkbox"
+            ? _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.name,
+                    expression: "name"
+                  }
+                ],
+                attrs: { id: _vm.name, name: _vm.name, type: "checkbox" },
+                domProps: {
+                  checked: Array.isArray(_vm.name)
+                    ? _vm._i(_vm.name, null) > -1
+                    : _vm.name
+                },
+                on: {
+                  change: function($event) {
+                    var $$a = _vm.name,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = null,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.name = $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          (_vm.name = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
+                      }
+                    } else {
+                      _vm.name = $$c
+                    }
+                  }
+                }
+              })
+            : _vm.type === "radio"
+            ? _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.name,
+                    expression: "name"
+                  }
+                ],
+                attrs: { id: _vm.name, name: _vm.name, type: "radio" },
+                domProps: { checked: _vm._q(_vm.name, null) },
+                on: {
+                  change: function($event) {
+                    _vm.name = null
+                  }
+                }
+              })
+            : _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.name,
+                    expression: "name"
+                  }
+                ],
+                attrs: { id: _vm.name, name: _vm.name, type: _vm.type },
+                domProps: { value: _vm.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.name = $event.target.value
+                  }
+                }
+              }),
+          _vm._v(" "),
+          _vm.portfolioLink
+            ? _c("label", { attrs: { for: _vm.name } }, [
+                _vm._v(_vm._s(_vm.label))
+              ])
+            : _vm._e()
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.type === "radio"
+      ? _c("div", { staticClass: "inputField__wrapper" }, [
+          _c(
+            "div",
+            { key: _vm.item.value, attrs: { "v-for": _vm.item in _vm.items } },
+            [
+              _vm.radio === "checkbox"
+                ? _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.item.name,
+                        expression: "item.name"
+                      }
+                    ],
+                    attrs: {
+                      id: _vm.item.name,
+                      name: _vm.item.name,
+                      type: "checkbox"
+                    },
+                    domProps: {
+                      value: _vm.item.value,
+                      checked: Array.isArray(_vm.item.name)
+                        ? _vm._i(_vm.item.name, _vm.item.value) > -1
+                        : _vm.item.name
+                    },
+                    on: {
+                      change: function($event) {
+                        var $$a = _vm.item.name,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = _vm.item.value,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 &&
+                              _vm.$set(_vm.item, "name", $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              _vm.$set(
+                                _vm.item,
+                                "name",
+                                $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                              )
+                          }
+                        } else {
+                          _vm.$set(_vm.item, "name", $$c)
+                        }
+                      }
+                    }
+                  })
+                : _vm.radio === "radio"
+                ? _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.item.name,
+                        expression: "item.name"
+                      }
+                    ],
+                    attrs: {
+                      id: _vm.item.name,
+                      name: _vm.item.name,
+                      type: "radio"
+                    },
+                    domProps: {
+                      value: _vm.item.value,
+                      checked: _vm._q(_vm.item.name, _vm.item.value)
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.item, "name", _vm.item.value)
+                      }
+                    }
+                  })
+                : _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.item.name,
+                        expression: "item.name"
+                      }
+                    ],
+                    attrs: {
+                      id: _vm.item.name,
+                      name: _vm.item.name,
+                      type: _vm.radio
+                    },
+                    domProps: { value: _vm.item.value, value: _vm.item.name },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.item, "name", $event.target.value)
+                      }
+                    }
+                  }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: _vm.item.name } }, [
+                _vm._v(_vm._s(_vm.item.label))
+              ])
+            ]
+          )
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
