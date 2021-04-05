@@ -16,7 +16,6 @@ export default new Vuex.Store({
             contentOwner: '',
             existingStore: '',
             existingStoreUrls: '',
-            // email: '',
             qualityPerspective: '',
             experienceLevel: '',
             businessMarketing: ''

@@ -1,8 +1,50 @@
-.input {
-    background: $lightGrey;
-    border: 1px solid $grey;
-    border-radius: 4px;
-    box-sizing: border-box;
+.inputField {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10px 0;
 
-    // TODO: Set label and placeholder styles.
+    label {
+        font-size: 14px;
+        line-height: calc(15 / 14);
+    }
+
+    input[type=text],
+    input[type=textarea],
+    input[type=name],
+    input[type=url],
+    textarea,
+    select {
+        margin: 8px 0;
+        font-size: 16px;
+        line-height: calc(22 / 16);
+        padding: 8px;
+        background: $lightGrey;
+        border: 1px solid $grey;
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: 100%;
+
+        ::placeholder {
+            // Handle browser prefixes with Webpack.
+            color: #6E777D;
+        }
+    }
+
+    &--radio {
+        > label:not(:first-child) {
+            font-size: 16px;
+            line-height: calc(22 / 16);
+            font-weight: 500;
+            padding-top: 12px;
+        }
+    }
+
+    // Ensure a 20px gap with justify space-between in `.card`.
+    &.width50 {
+        width: calc(50% - 10px);
+    }
+
+    &.width100 {
+        width: 100%;
+    }
 }

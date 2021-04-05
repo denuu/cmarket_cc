@@ -2,6 +2,27 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({//
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/card.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/card.vue?vue&type=script&lang=js& ***!
@@ -61,10 +82,6 @@ __webpack_require__.r(__webpack_exports__);
     formFields: {
       type: Array
     }
-  },
-  data: function data() {
-    return {// title: 'Share your work with us',
-    };
   },
   components: {
     'form-component': _formComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default,
@@ -188,7 +205,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     submit: function submit() {
       console.log(this.$store.state.form);
-      alert('This aint it, chief');
+      alert('If only MySQL 8.* mysql_native_password bug could be fixed so we could submit this.');
       this.$router.push('/3');
     }
   }
@@ -404,6 +421,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -450,6 +489,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -458,8 +500,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       title: 'Thank you for applying to become a seller with Creative Market!',
-      textContent: 'Our curators are reviewing your application. We’ll get back to you within 5-7 business days. Meanwhile, you already have access to your Shop Studio, so let’s start setting up your shop!' // image: '~images/plane' // TODO.
-
+      textContent: 'Our curators are reviewing your application. We’ll get back to you within <strong>5-7 business days</strong>. Meanwhile, you already have access to your Shop Studio, so let’s start setting up your shop!'
     };
   }
 });
@@ -484,6 +525,14 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -564,10 +613,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/card.vue */ "./resources/js/components/card.vue");
-/* harmony import */ var _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/steps/stepOne.vue */ "./resources/js/components/steps/stepOne.vue");
-/* harmony import */ var _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/steps/stepTwo.vue */ "./resources/js/components/steps/stepTwo.vue");
-/* harmony import */ var _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/steps/stepThree.vue */ "./resources/js/components/steps/stepThree.vue");
+/* harmony import */ var _components_appHeader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/appHeader.vue */ "./resources/js/components/appHeader.vue");
+/* harmony import */ var _components_card_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/card.vue */ "./resources/js/components/card.vue");
+/* harmony import */ var _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/steps/stepOne.vue */ "./resources/js/components/steps/stepOne.vue");
+/* harmony import */ var _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/steps/stepTwo.vue */ "./resources/js/components/steps/stepTwo.vue");
+/* harmony import */ var _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/steps/stepThree.vue */ "./resources/js/components/steps/stepThree.vue");
+//
 //
 //
 //
@@ -580,13 +631,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var default_layout = "default";
+ // const default_layout = "default"
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    'card': _components_card_vue__WEBPACK_IMPORTED_MODULE_0__.default,
-    'step-one': _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_1__.default,
-    'step-two': _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    'step-three': _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_3__.default
+    'app-header': _components_appHeader_vue__WEBPACK_IMPORTED_MODULE_0__.default,
+    'card': _components_card_vue__WEBPACK_IMPORTED_MODULE_1__.default,
+    'step-one': _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_2__.default,
+    'step-two': _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_3__.default,
+    'step-three': _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_4__.default
   }
 });
 
@@ -615,7 +668,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_3__.default({
   components: {
     App: _views_app_vue__WEBPACK_IMPORTED_MODULE_2__.default
   }
-}); // router.replace('/1') // TODO: To redirect, or not to redirect?
+});
 
 /***/ }),
 
@@ -676,13 +729,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-map-fields */ "./node_modules/vuex-map-fields/dist/index.esm.js");
+/* harmony import */ var vuex_map_fields__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-map-fields */ "./node_modules/vuex-map-fields/dist/index.esm.js");
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_2__.default);
+vue__WEBPACK_IMPORTED_MODULE_1__.default.use(vuex__WEBPACK_IMPORTED_MODULE_2__.default);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_2__.default.Store({
   strict: "development" !== "production",
   state: {
@@ -695,17 +748,16 @@ vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_2__.d
       contentOwner: '',
       existingStore: '',
       existingStoreUrls: '',
-      // email: '',
       qualityPerspective: '',
       experienceLevel: '',
       businessMarketing: ''
     }
   },
   getters: {
-    getField: vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.getField
+    getField: vuex_map_fields__WEBPACK_IMPORTED_MODULE_0__.getField
   },
   mutations: {
-    updateField: vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.updateField
+    updateField: vuex_map_fields__WEBPACK_IMPORTED_MODULE_0__.updateField
   }
 }));
 
@@ -720,6 +772,44 @@ vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_2__.d
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "./resources/js/components/appHeader.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/appHeader.vue ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./appHeader.vue?vue&type=template&id=678fa15a& */ "./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a&");
+/* harmony import */ var _appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./appHeader.vue?vue&type=script&lang=js& */ "./resources/js/components/appHeader.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/appHeader.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
@@ -1065,6 +1155,21 @@ component.options.__file = "resources/js/views/app.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/appHeader.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/appHeader.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./appHeader.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/card.vue?vue&type=script&lang=js&":
 /*!*******************************************************************!*\
   !*** ./resources/js/components/card.vue?vue&type=script&lang=js& ***!
@@ -1197,6 +1302,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./app.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/app.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a& ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./appHeader.vue?vue&type=template&id=678fa15a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a&");
+
 
 /***/ }),
 
@@ -1344,6 +1465,39 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "appHeader" }, [
+      _c("div", { staticClass: "appHeader__image" })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/card.vue?vue&type=template&id=c170f44a&":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/card.vue?vue&type=template&id=c170f44a& ***!
@@ -1469,7 +1623,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "formNavigation" }, [
     _c(
       "button",
       {
@@ -1481,13 +1635,17 @@ var render = function() {
             expression: "!isFirstStep() && !isSubmitted()"
           }
         ],
+        staticClass: "inputButton",
         on: {
           click: function($event) {
             return _vm.goBack()
           }
         }
       },
-      [_vm._v("\n        Back\n    ")]
+      [
+        _c("span", { staticClass: "chevron--left" }, [_vm._v("<")]),
+        _vm._v(" Back\n    ")
+      ]
     ),
     _vm._v(" "),
     _c(
@@ -1501,6 +1659,7 @@ var render = function() {
             expression: "!isSubmitted()"
           }
         ],
+        staticClass: "inputButton inputButton--green flex-self-end",
         on: {
           click: function($event) {
             return _vm.goForward()
@@ -1835,315 +1994,345 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "card" },
-    [
-      _vm.label || _vm.indexLabel
-        ? _c("div", { staticClass: "card__labelRow" }, [
-            _vm.label
-              ? _c("span", { staticClass: "card__label" }, [
-                  _vm._v("\n            " + _vm._s(_vm.label) + "\n        ")
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.indexLabel
-              ? _c("span", { staticClass: "card__indexLabel" }, [
-                  _vm._v(
-                    "\n            " + _vm._s(_vm.indexLabel) + "\n        "
-                  )
-                ])
-              : _vm._e()
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.title
-        ? _c("h1", { staticClass: "card__heading" }, [
-            _vm._v(_vm._s(_vm.title))
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.textContent
-        ? _c("div", { staticClass: "card__textContent" }, [
-            _c("p", [_vm._v(_vm._s(_vm.textContent))])
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "firstName" } }, [_vm._v("First Name")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.firstName,
-            expression: "firstName"
-          }
-        ],
-        attrs: {
-          type: "text",
-          id: "firstName",
-          name: "firstName",
-          autocomplete: "given-name"
-        },
-        domProps: { value: _vm.firstName },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.firstName = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "lastName" } }, [_vm._v("Last Name")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.lastName,
-            expression: "lastName"
-          }
-        ],
-        attrs: {
-          type: "text",
-          id: "lastName",
-          name: "lastName",
-          autocomplete: "family-name"
-        },
-        domProps: { value: _vm.lastName },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.lastName = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "shopCategory", autocomplete: "off" } }, [
-        _vm._v("Your Shop Category")
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.shopCategory,
-              expression: "shopCategory"
-            }
-          ],
-          attrs: { type: "text", id: "shopCategory", name: "shopCategory" },
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.shopCategory = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        [
-          _c("option", [_vm._v("Graphics")]),
+  return _c("div", { staticClass: "card-centre" }, [
+    _c(
+      "div",
+      { staticClass: "card" },
+      [
+        _vm.label || _vm.indexLabel
+          ? _c("div", { staticClass: "card__labelRow" }, [
+              _vm.label
+                ? _c("span", { staticClass: "card__label" }, [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.label) +
+                        "\n            "
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.indexLabel
+                ? _c("span", { staticClass: "card__indexLabel" }, [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.indexLabel) +
+                        "\n            "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.title
+          ? _c("h1", { staticClass: "card__heading" }, [
+              _vm._v(_vm._s(_vm.title))
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.textContent
+          ? _c("div", { staticClass: "card__textContent" }, [
+              _c("p", [_vm._v(_vm._s(_vm.textContent))])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width50" }, [
+          _c("label", { attrs: { for: "firstName" } }, [_vm._v("First Name")]),
           _vm._v(" "),
-          _c("option", [_vm._v("Fonts")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Templates")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Add-ons")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Photos")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("Web Themes")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("3D")])
-        ]
-      ),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "portfolioLink", autocomplete: "off" } }, [
-        _vm._v("Portfolio Link")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.portfolioLink,
-            expression: "portfolioLink"
-          }
-        ],
-        attrs: { type: "url", id: "portfolioLink", name: "portfolioLink" },
-        domProps: { value: _vm.portfolioLink },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.portfolioLink = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _vm.portfolioLink
-        ? _c("input", {
+          _c("input", {
             directives: [
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.contentOwner,
-                expression: "contentOwner"
+                value: _vm.firstName,
+                expression: "firstName"
               }
             ],
             attrs: {
-              type: "checkbox",
-              id: "contentOwner",
-              name: "contentOwner"
+              type: "text",
+              id: "firstName",
+              name: "firstName",
+              autocomplete: "given-name"
             },
-            domProps: {
-              checked: Array.isArray(_vm.contentOwner)
-                ? _vm._i(_vm.contentOwner, null) > -1
-                : _vm.contentOwner
-            },
-            on: {
-              change: function($event) {
-                var $$a = _vm.contentOwner,
-                  $$el = $event.target,
-                  $$c = $$el.checked ? true : false
-                if (Array.isArray($$a)) {
-                  var $$v = null,
-                    $$i = _vm._i($$a, $$v)
-                  if ($$el.checked) {
-                    $$i < 0 && (_vm.contentOwner = $$a.concat([$$v]))
-                  } else {
-                    $$i > -1 &&
-                      (_vm.contentOwner = $$a
-                        .slice(0, $$i)
-                        .concat($$a.slice($$i + 1)))
-                  }
-                } else {
-                  _vm.contentOwner = $$c
-                }
-              }
-            }
-          })
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.portfolioLink
-        ? _c("label", { attrs: { for: "contentnOwner" } }, [
-            _vm._v(
-              "Yes, I confirm that the content I submit is authored by me."
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "existingStore" } }, [
-        _vm._v("Do you already have an online store?")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.existingStore,
-            expression: "existingStore"
-          }
-        ],
-        attrs: {
-          type: "radio",
-          id: "existingStoreYes",
-          name: "existingStoreYes",
-          value: "yes"
-        },
-        domProps: { checked: _vm._q(_vm.existingStore, "yes") },
-        on: {
-          change: function($event) {
-            _vm.existingStore = "yes"
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "existingStoreYes" } }, [_vm._v("Yes")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.existingStore,
-            expression: "existingStore"
-          }
-        ],
-        attrs: {
-          type: "radio",
-          id: "existingStoreNo",
-          name: "existingStoreNo",
-          value: "no"
-        },
-        domProps: { checked: _vm._q(_vm.existingStore, "no") },
-        on: {
-          change: function($event) {
-            _vm.existingStore = "no"
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "existingStoreNo" } }, [_vm._v("No")]),
-      _vm._v(" "),
-      _vm.existingStore === "yes"
-        ? _c(
-            "label",
-            { attrs: { for: "existingStoreUrls", autocomplete: "off" } },
-            [_vm._v("Online stores I sell on today")]
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.existingStore === "yes"
-        ? _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.existingStoreUrls,
-                expression: "existingStoreUrls"
-              }
-            ],
-            attrs: {
-              type: "textarea",
-              id: "existingStoreUrls",
-              name: "existingStoreUrls"
-            },
-            domProps: { value: _vm.existingStoreUrls },
+            domProps: { value: _vm.firstName },
             on: {
               input: function($event) {
                 if ($event.target.composing) {
                   return
                 }
-                _vm.existingStoreUrls = $event.target.value
+                _vm.firstName = $event.target.value
               }
             }
           })
-        : _vm._e(),
-      _vm._v(" "),
-      _c("form-navigation")
-    ],
-    1
-  )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width50" }, [
+          _c("label", { attrs: { for: "lastName" } }, [_vm._v("Last Name")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.lastName,
+                expression: "lastName"
+              }
+            ],
+            attrs: {
+              type: "text",
+              id: "lastName",
+              name: "lastName",
+              autocomplete: "family-name"
+            },
+            domProps: { value: _vm.lastName },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.lastName = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c("label", { attrs: { for: "shopCategory", autocomplete: "off" } }, [
+            _vm._v("Your Shop Category")
+          ]),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.shopCategory,
+                  expression: "shopCategory"
+                }
+              ],
+              attrs: { type: "text", id: "shopCategory", name: "shopCategory" },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.shopCategory = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", [_vm._v("Graphics")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Fonts")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Templates")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Add-ons")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Photos")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Web Themes")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("3D")])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c(
+            "label",
+            { attrs: { for: "portfolioLink", autocomplete: "off" } },
+            [_vm._v("Portfolio Link")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.portfolioLink,
+                expression: "portfolioLink"
+              }
+            ],
+            attrs: { type: "url", id: "portfolioLink", name: "portfolioLink" },
+            domProps: { value: _vm.portfolioLink },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.portfolioLink = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _vm.portfolioLink
+            ? _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.contentOwner,
+                    expression: "contentOwner"
+                  }
+                ],
+                attrs: {
+                  type: "checkbox",
+                  id: "contentOwner",
+                  name: "contentOwner"
+                },
+                domProps: {
+                  checked: Array.isArray(_vm.contentOwner)
+                    ? _vm._i(_vm.contentOwner, null) > -1
+                    : _vm.contentOwner
+                },
+                on: {
+                  change: function($event) {
+                    var $$a = _vm.contentOwner,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = null,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.contentOwner = $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          (_vm.contentOwner = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
+                      }
+                    } else {
+                      _vm.contentOwner = $$c
+                    }
+                  }
+                }
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.portfolioLink
+            ? _c("label", { attrs: { for: "contentnOwner" } }, [
+                _vm._v(
+                  "Yes, I confirm that the content I submit is authored by me."
+                )
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100 inputField--radio" }, [
+          _c("label", { attrs: { for: "existingStore" } }, [
+            _vm._v("Do you already have an online store?")
+          ]),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "existingStoreYes" } }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.existingStore,
+                  expression: "existingStore"
+                }
+              ],
+              attrs: {
+                type: "radio",
+                id: "existingStoreYes",
+                name: "existingStoreYes",
+                value: "yes"
+              },
+              domProps: { checked: _vm._q(_vm.existingStore, "yes") },
+              on: {
+                change: function($event) {
+                  _vm.existingStore = "yes"
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "selected" }),
+            _vm._v("\n                Yes\n            ")
+          ]),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "existingStoreNo" } }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.existingStore,
+                  expression: "existingStore"
+                }
+              ],
+              attrs: {
+                type: "radio",
+                id: "existingStoreNo",
+                name: "existingStoreNo",
+                value: "no"
+              },
+              domProps: { checked: _vm._q(_vm.existingStore, "no") },
+              on: {
+                change: function($event) {
+                  _vm.existingStore = "no"
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "selected" }),
+            _vm._v("\n                No\n            ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _vm.existingStore === "yes"
+            ? _c(
+                "label",
+                { attrs: { for: "existingStoreUrls", autocomplete: "off" } },
+                [_vm._v("Online stores I sell on today")]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.existingStore === "yes"
+            ? _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.existingStoreUrls,
+                    expression: "existingStoreUrls"
+                  }
+                ],
+                attrs: {
+                  rows: "3",
+                  id: "existingStoreUrls",
+                  name: "existingStoreUrls"
+                },
+                domProps: { value: _vm.existingStoreUrls },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.existingStoreUrls = $event.target.value
+                  }
+                }
+              })
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("form-navigation")
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2167,26 +2356,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "card" },
-    [
-      _vm.title
-        ? _c("h1", { staticClass: "card__heading" }, [
-            _vm._v(_vm._s(_vm.title))
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.textContent
-        ? _c("div", { staticClass: "card__textContent" }, [
-            _c("p", [_vm._v(_vm._s(_vm.textContent))])
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("form-navigation")
-    ],
-    1
-  )
+  return _c("div", { staticClass: "card-centre" }, [
+    _c(
+      "div",
+      { staticClass: "card card--success" },
+      [
+        _c("div", { staticClass: "card__submitImage" }),
+        _vm._v(" "),
+        _vm.title
+          ? _c("h1", { staticClass: "card__heading successPanel" }, [
+              _vm._v(_vm._s(_vm.title))
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.textContent
+          ? _c("div", { staticClass: "card__textContent--success" }, [
+              _c("p", { domProps: { innerHTML: _vm._s(_vm.textContent) } })
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("form-navigation")
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2210,248 +2403,266 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "card" },
-    [
-      _vm.label || _vm.indexLabel
-        ? _c("div", { staticClass: "card__labelRow" }, [
-            _vm.label
-              ? _c("span", { staticClass: "card__label" }, [
-                  _vm._v(
-                    "\n                " + _vm._s(_vm.label) + "\n            "
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.indexLabel
-              ? _c("span", { staticClass: "card__indexLabel" }, [
-                  _vm._v(
-                    "\n                " +
-                      _vm._s(_vm.indexLabel) +
-                      "\n            "
-                  )
-                ])
-              : _vm._e()
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.title
-        ? _c("h1", { staticClass: "card__heading" }, [
-            _vm._v(_vm._s(_vm.title))
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.textContent
-        ? _c("div", { staticClass: "card__textContent" }, [
-            _c("p", [_vm._v(_vm._s(_vm.textContent))])
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "qualityPerspective" } }, [
-        _vm._v(
-          "When creating products to sell, which best describes your perspective on quality?"
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
+  return _c("div", { staticClass: "card-centre" }, [
+    _c(
+      "div",
+      { staticClass: "card" },
+      [
+        _vm.label || _vm.indexLabel
+          ? _c("div", { staticClass: "card__labelRow" }, [
+              _vm.label
+                ? _c("span", { staticClass: "card__label" }, [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.label) +
+                        "\n            "
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.indexLabel
+                ? _c("span", { staticClass: "card__indexLabel" }, [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.indexLabel) +
+                        "\n            "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.title
+          ? _c("h1", { staticClass: "card__heading" }, [
+              _vm._v(_vm._s(_vm.title))
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.textContent
+          ? _c("div", { staticClass: "card__textContent" }, [
+              _c("p", [_vm._v(_vm._s(_vm.textContent))])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c("label", { attrs: { for: "qualityPerspective" } }, [
+            _vm._v(
+              "When creating products to sell, which best describes your perspective on quality?"
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "select",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.qualityPerspective,
-              expression: "qualityPerspective"
-            }
-          ],
-          attrs: {
-            type: "text",
-            id: "qualityPerspective",
-            name: "qualityPerspective",
-            autocomplete: "off"
-          },
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.qualityPerspective = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        [
-          _c("option", { attrs: { value: "5" } }, [
-            _vm._v(
-              "I don’t care what it takes, my products are the highest quality possible."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "4" } }, [
-            _vm._v(
-              "I put in enough effort to make my product pretty high quality, but at some point my time is better spent elsewhere."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [
-            _vm._v(
-              "I try to get quality products out quickly, even if I need to take a shortcut now and then."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [
-            _vm._v(
-              "I spend the minimum amount of time & effort it takes to create products that are acceptable quality."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [
-            _vm._v("Quantity is more important to me than quality.")
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "experienceLevel" } }, [
-        _vm._v(
-          "How would you describe your experience level as an online seller?"
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.experienceLevel,
-              expression: "experienceLevel"
-            }
-          ],
-          attrs: {
-            type: "text",
-            id: "experienceLevel",
-            name: "experienceLevel",
-            autocomplete: "off"
-          },
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.experienceLevel = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        [
-          _c("option", { attrs: { value: "5" } }, [
-            _vm._v(
-              "I sell on multiple marketplaces and through my own website."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "4" } }, [
-            _vm._v("I have experience selling through only my own website.")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [
-            _vm._v("I have experience selling through multiple marketplaces.")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [
-            _vm._v("I have experience selling through one online marketplace.")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [
-            _vm._v("I’m new to selling creative products online.")
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "label",
-        { attrs: { for: "businessMarketing", autocomplete: "off" } },
-        [
-          _vm._v(
-            "How would you describe your understanding of business and marketing?"
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.qualityPerspective,
+                  expression: "qualityPerspective"
+                }
+              ],
+              attrs: {
+                type: "text",
+                id: "qualityPerspective",
+                name: "qualityPerspective",
+                autocomplete: "off"
+              },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.qualityPerspective = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { value: "5" } }, [
+                _vm._v(
+                  "I don’t care what it takes, my products are the highest quality possible."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "4" } }, [
+                _vm._v(
+                  "I put in enough effort to make my product pretty high quality, but at some point my time is better spent elsewhere."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "3" } }, [
+                _vm._v(
+                  "I try to get quality products out quickly, even if I need to take a shortcut now and then."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "2" } }, [
+                _vm._v(
+                  "I spend the minimum amount of time & effort it takes to create products that are acceptable quality."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1" } }, [
+                _vm._v("Quantity is more important to me than quality.")
+              ])
+            ]
           )
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c("label", { attrs: { for: "experienceLevel" } }, [
+            _vm._v(
+              "How would you describe your experience level as an online seller?"
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "select",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.businessMarketing,
-              expression: "businessMarketing"
-            }
-          ],
-          attrs: {
-            type: "text",
-            id: "businessMarketing",
-            name: "businessMarketing",
-            autocomplete: "off"
-          },
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.businessMarketing = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        [
-          _c("option", { attrs: { value: "4" } }, [
-            _vm._v(
-              "I have an extensive background in business and/or marketing."
-            )
-          ]),
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.experienceLevel,
+                  expression: "experienceLevel"
+                }
+              ],
+              attrs: {
+                type: "text",
+                id: "experienceLevel",
+                name: "experienceLevel",
+                autocomplete: "off"
+              },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.experienceLevel = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { value: "5" } }, [
+                _vm._v(
+                  "I sell on multiple marketplaces and through my own website."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "4" } }, [
+                _vm._v("I have experience selling through only my own website.")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "3" } }, [
+                _vm._v(
+                  "I have experience selling through multiple marketplaces."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "2" } }, [
+                _vm._v(
+                  "I have experience selling through one online marketplace."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1" } }, [
+                _vm._v("I’m new to selling creative products online.")
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c(
+            "label",
+            { attrs: { for: "businessMarketing", autocomplete: "off" } },
+            [
+              _vm._v(
+                "How would you describe your understanding of business and marketing?"
+              )
+            ]
+          ),
           _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [
-            _vm._v(
-              "I’m familiar with some skills & techniques, but I’m not sure how to apply them when selling my creative work."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [
-            _vm._v("I’m vaguely aware of basic business & marketing concepts.")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [
-            _vm._v("I’m not interested in understanding business & marketing.")
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("form-navigation")
-    ],
-    1
-  )
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.businessMarketing,
+                  expression: "businessMarketing"
+                }
+              ],
+              attrs: {
+                type: "text",
+                id: "businessMarketing",
+                name: "businessMarketing",
+                autocomplete: "off"
+              },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.businessMarketing = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { value: "4" } }, [
+                _vm._v(
+                  "I have an extensive background in business and/or marketing."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "3" } }, [
+                _vm._v(
+                  "I’m familiar with some skills & techniques, but I’m not sure how to apply them when selling my creative work."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "2" } }, [
+                _vm._v(
+                  "I’m vaguely aware of basic business & marketing concepts."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1" } }, [
+                _vm._v(
+                  "I’m not interested in understanding business & marketing."
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("form-navigation")
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2478,6 +2689,8 @@ var render = function() {
   return _c(
     "div",
     [
+      _c("app-header"),
+      _vm._v(" "),
       this.$route.path === "/" ? _c("step-one") : _vm._e(),
       _vm._v(" "),
       this.$route.path === "/2" ? _c("step-two") : _vm._e(),

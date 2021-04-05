@@ -1,5 +1,7 @@
 @import '_variables';
+@import 'components/appHeader';
 @import 'components/button';
+@import 'components/formNavigation.scss';
 @import 'components/card';
 @import 'components/input';
 
@@ -7,4 +9,34 @@
 html {
     background: $white;
     background-image: url('../images/background.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    font-family: Helvetica, Arial, sans-serif;
+    height: 100vh;
+    
+    * {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.card-centre {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    
+    @media screen and (min-width: 768px) {
+        top: 139px; // 209 top offset - 70px of header.
+    }
+}
+
+h1,
+label {
+    font-weight: 600;
 }

@@ -1,0 +1,16 @@
+.formNavigation {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        flex-flow: row nowrap;
+    }
+
+    // When only visible button, keep aligned right.
+    .flex-self-end {
+        margin-left: auto;
+    }
+}

@@ -1,16 +1,19 @@
 <template>
-    <div class='card'>
-		<!-- Image -->
-        
-        <!-- Heading -->
-        <h1 v-if='title' class='card__heading'>{{ title }}</h1>
-        
-        <!-- Text Content -->
-        <div v-if='textContent' class='card__textContent'>
-            <p>{{ textContent }}</p>
-        </div>
+    <div class='card-centre'>
+        <div class='card card--success'>
+            <!-- Image (CSS hack as I haven't learned Vue Images yet.) -->
+            <div class='card__submitImage'></div>
+            
+            <!-- Heading -->
+            <h1 v-if='title' class='card__heading successPanel'>{{ title }}</h1>
+            
+            <!-- Text Content -->
+            <div v-if='textContent' class='card__textContent--success'>
+                <p v-html='textContent'></p>
+            </div>
 
-        <form-navigation></form-navigation>
+            <form-navigation></form-navigation>
+        </div>
     </div>
 </template>
 
@@ -24,8 +27,7 @@ export default {
     data() {
         return {
             title: 'Thank you for applying to become a seller with Creative Market!',
-            textContent: 'Our curators are reviewing your application. We’ll get back to you within 5-7 business days. Meanwhile, you already have access to your Shop Studio, so let’s start setting up your shop!',
-			// image: '~images/plane' // TODO.
+            textContent: 'Our curators are reviewing your application. We’ll get back to you within <strong>5-7 business days</strong>. Meanwhile, you already have access to your Shop Studio, so let’s start setting up your shop!',
         }
     }
 }

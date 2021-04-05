@@ -1,15 +1,25 @@
 .card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     width: 100%;
-    max-width: 657px;
     margin: 0 auto;
     background: $white;
     box-shadow: none;
     height: calc(100vh - 87px); // Minus header bar.
+    margin-top: 88px;
+    padding: 40px 20px;
+    box-sizing: border-box;
 
 
     @media screen and (min-width: 768px) {
         height: 100%;
+        min-height: 483px;
         box-shadow: 0px 2px 10px $shadow;
+        max-width: 657px;
+        border-radius: 8px;
+        height: fit-content;
+        padding: 40px 40px;
     }
 
     &__labelRow {
@@ -17,11 +27,11 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
     &__label,
     &__indexLabel {
-        font-family: Helvetica, Arial, sans-serif;
         font-weight: 600;
         color: $coolGrey;
         font-size: 12px;
@@ -31,10 +41,40 @@
     }
 
     &__heading { 
-        font-family: Helvetica, Arial, sans-serif;
         font-weight: 600;
         color: $coolGrey;
         font-size: 24px;
-        line-height: calc(34px / 24px);
+        line-height: calc(34 / 24);
+    }
+
+    &__textContent {
+        font-size: 16px;
+        line-height: calc(22 / 16);
+    }
+
+    &__submitImage {
+        background-image: url('../../images/plane.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 126px;
+        width: 100%;
+    }
+
+    &--success {
+        max-height: 520px;
+        margin: 88px 10px 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 88px auto auto;
+            max-height: fit-content;
+            margin-top: 88px;
+        }
+
+        * {
+            text-align: center;
+            max-width: 514px;
+            margin: 0 auto;
+        }
     }
 }
