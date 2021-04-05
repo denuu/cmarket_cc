@@ -11,5 +11,3 @@ const app = new Vue({
     router,
     components: { App }
 });
-
-// router.replace('/1') // TODO: To redirect, or not to redirect?

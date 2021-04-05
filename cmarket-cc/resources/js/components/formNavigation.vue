@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='formNavigation'>
         <!-- Previous -->
         <!-- <input-button 
             @click='goBack' 
@@ -8,8 +8,8 @@
             class='inputButton inputButton--clear'
         >
         </input-button> -->
-        <button @click='goBack()' v-show='!isFirstStep() && !isSubmitted()'>
-            Back
+        <button class='inputButton' @click='goBack()' v-show='!isFirstStep() && !isSubmitted()'>
+            <span class='chevron--left'>&#60;</span> Back
         </button>
 
         <!-- Next -->
@@ -20,7 +20,7 @@
             class='inputButton inputButton--green'
         >
         </input-button> -->
-        <button @click='goForward()' v-show='!isSubmitted()'>
+        <button class='inputButton inputButton--green flex-self-end' @click='goForward()' v-show='!isSubmitted()'>
             {{ nextButtonText() }}
         </button>
     </div>
@@ -58,7 +58,8 @@ export default {
             }
         },
         submit() {
-            alert('This aint it, chief')
+            console.log(this.$store.state.form)
+            alert('If only MySQL 8.* mysql_native_password bug could be fixed so we could submit this.')
             this.$router.push('/3')
         }
     }

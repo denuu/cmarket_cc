@@ -2,6 +2,27 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({//
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/card.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/card.vue?vue&type=script&lang=js& ***!
@@ -61,10 +82,6 @@ __webpack_require__.r(__webpack_exports__);
     formFields: {
       type: Array
     }
-  },
-  data: function data() {
-    return {// title: 'Share your work with us',
-    };
   },
   components: {
     'form-component': _formComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default,
@@ -159,7 +176,6 @@ __webpack_require__.r(__webpack_exports__);
 // import InputButton from './inputButton.vue'
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
-    // TODO: STEP TWO SUBMITS, STEP THREE IS SUCCESS.
     nextButtonText: function nextButtonText() {
       if (this.$route.name === 'secondStep') {
         return 'Submit Application';
@@ -188,33 +204,11 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     submit: function submit() {
-      // const data = new FormData()
-      // data.append('firstName', this.$store.firstName) // TODO Use getter fn.
-      alert('This aint it, chief');
+      console.log(this.$store.state.form);
+      alert('If only MySQL 8.* mysql_native_password bug could be fixed so we could submit this.');
       this.$router.push('/3');
     }
-  } // name: 'inputButton',
-  // props: {
-  //     name: {
-  //         type: String,
-  //         required: true
-  //     },
-  //     type: {
-  //         type: String
-  //     },
-  //     url: {
-  //         type: String
-  //     }
-  // },
-  // components: {
-  //     'input-button': InputButton
-  // },
-  // data () {
-  //     return {
-  //         // width: 50 // turn into prop
-  //     }
-  // },
-
+  }
 });
 
 /***/ }),
@@ -276,11 +270,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'inputField',
   // props: ['name', 'type', 'autocomplete'],
   props: {
     name: {
+      type: String
+    },
+    label: {
       type: String
     },
     type: {
@@ -290,6 +317,15 @@ __webpack_require__.r(__webpack_exports__);
     autocomplete: {
       type: String,
       "default": 'off'
+    },
+    width: {
+      type: Number,
+      "default": 100
+    },
+    items: {
+      type: Array // select options
+      // radio options
+
     }
   },
   data: function data() {
@@ -313,6 +349,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _formNavigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../formNavigation */ "./resources/js/components/formNavigation.vue");
+/* harmony import */ var vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-map-fields */ "./node_modules/vuex-map-fields/dist/index.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -358,82 +444,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     'form-navigation': _formNavigation__WEBPACK_IMPORTED_MODULE_0__.default
   },
-  computed: {
-    currentStep: {
-      get: function get() {
-        return this.$store.state.currentStep;
-      },
-      set: function set(value) {
-        this.$store.commit('setCurrentStep', {
-          currentStep: value
-        });
-      }
-    },
-    firstName: {
-      get: function get() {
-        return this.$store.state.firstName;
-      },
-      set: function set(value) {
-        this.$store.commit('setFirstName', {
-          firstName: value
-        });
-      }
-    },
-    lastName: {
-      get: function get() {
-        return this.$store.state.lastName;
-      },
-      set: function set(value) {
-        this.$store.commit('setLastName', {
-          lastName: value
-        });
-      }
-    },
-    shopCategory: {
-      get: function get() {
-        return this.$store.state.shopCategory;
-      },
-      set: function set(value) {
-        this.$store.commit('setShopCategory', {
-          shopCategory: value
-        });
-      }
-    },
-    portfolioLink: {
-      get: function get() {
-        return this.$store.state.portfolioLink;
-      },
-      set: function set(value) {
-        this.$store.commit('setPortfolioLink', {
-          portfolioLink: value
-        });
-      }
-    },
-    existingStore: {
-      get: function get() {
-        return this.$store.state.existingStore;
-      },
-      set: function set(value) {
-        this.$store.commit('setExistingStore', {
-          existingStore: value
-        });
-      }
-    },
-    existingStoreUrls: {
-      get: function get() {
-        return this.$store.state.existingStoreUrls;
-      },
-      set: function set(value) {
-        this.$store.commit('setExistingStoreUrls', {
-          existingStoreUrls: value
-        });
-      }
-    }
-  },
+  computed: _objectSpread({}, (0,vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.mapFields)(['form.currentStep', 'form.firstName', 'form.lastName', 'form.shopCategory', 'form.portfolioLink', 'form.contentOwner', 'form.existingStore', 'form.existingStoreUrls'])),
   data: function data() {
     return {
       title: 'Share your work with us',
@@ -473,6 +489,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -481,8 +500,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       title: 'Thank you for applying to become a seller with Creative Market!',
-      textContent: 'Our curators are reviewing your application. We’ll get back to you within 5-7 business days. Meanwhile, you already have access to your Shop Studio, so let’s start setting up your shop!' // image: '~images/plane' // TODO.
-
+      textContent: 'Our curators are reviewing your application. We’ll get back to you within <strong>5-7 business days</strong>. Meanwhile, you already have access to your Shop Studio, so let’s start setting up your shop!'
     };
   }
 });
@@ -500,6 +518,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _formNavigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../formNavigation */ "./resources/js/components/formNavigation.vue");
+/* harmony import */ var vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex-map-fields */ "./node_modules/vuex-map-fields/dist/index.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -552,42 +585,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     'form-navigation': _formNavigation__WEBPACK_IMPORTED_MODULE_0__.default
   },
-  computed: {
-    qualityPespective: {
-      get: function get() {
-        return this.$store.state.qualityPespective;
-      },
-      set: function set(value) {
-        this.$store.commit('setQualityPespective', {
-          qualityPespective: value
-        });
-      }
-    },
-    experienceLevel: {
-      get: function get() {
-        return this.$store.state.experienceLevel;
-      },
-      set: function set(value) {
-        this.$store.commit('setExperienceLevel', {
-          experienceLevel: value
-        });
-      }
-    },
-    businessMarketing: {
-      get: function get() {
-        return this.$store.state.businessMarketing;
-      },
-      set: function set(value) {
-        this.$store.commit('setBusinessMarketing', {
-          businessMarketing: value
-        });
-      }
-    }
-  },
+  computed: _objectSpread({}, (0,vuex_map_fields__WEBPACK_IMPORTED_MODULE_1__.mapFields)(['form.qualityPerspective', 'form.experienceLevel', 'form.businessMarketing'])),
   data: function data() {
     return {
       title: 'Tell us a little about yourself',
@@ -610,10 +613,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/card.vue */ "./resources/js/components/card.vue");
-/* harmony import */ var _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/steps/stepOne.vue */ "./resources/js/components/steps/stepOne.vue");
-/* harmony import */ var _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/steps/stepTwo.vue */ "./resources/js/components/steps/stepTwo.vue");
-/* harmony import */ var _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/steps/stepThree.vue */ "./resources/js/components/steps/stepThree.vue");
+/* harmony import */ var _components_appHeader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/appHeader.vue */ "./resources/js/components/appHeader.vue");
+/* harmony import */ var _components_card_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/card.vue */ "./resources/js/components/card.vue");
+/* harmony import */ var _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/steps/stepOne.vue */ "./resources/js/components/steps/stepOne.vue");
+/* harmony import */ var _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/steps/stepTwo.vue */ "./resources/js/components/steps/stepTwo.vue");
+/* harmony import */ var _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/steps/stepThree.vue */ "./resources/js/components/steps/stepThree.vue");
 //
 //
 //
@@ -623,90 +627,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-// let formData = {{ }}
 
 
 
 
-var default_layout = "default";
+ // const default_layout = "default"
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  // computed: {
-  // 	firstName: {
-  // 		get() {
-  // 			return this.$store.state.firstName
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setFirstName', {firstName: value})
-  // 		}
-  // 	},
-  // 	lastName: {
-  // 		get() {
-  // 			return this.$store.state.lastName
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setLastName', {lastName: value})
-  // 		}
-  // 	},
-  // 	shopCategory: {
-  // 		get() {
-  // 			return this.$store.state.shopCategory
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setShopCategory', {shopCategory: value})
-  // 		}
-  // 	},
-  // 	portfolioLink: {
-  // 		get() {
-  // 			return this.$store.state.portfolioLink
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setPortfolioLink', {portfolioLink: value})
-  // 		}
-  // 	},
-  // 	existingStore: {
-  // 		get() {
-  // 			return this.$store.state.existingStore
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setExistingStore', {existingStore: value})
-  // 		}
-  // 	},
-  // 	existingStoreUrls: {
-  // 		get() {
-  // 			return this.$store.state.existingStoreUrls
-  // 		},
-  // 		set(value) {
-  // 			this.$store.commit('setExistingStoreUrls', {existingStoreUrls: value})
-  // 		}
-  // 	}
-  // },
-  data: function data() {
-    return {
-      title: 'Share your work with us',
-      textContent: 'To ensure the the quality of our marketplace, we limit our seller community to the most qualified creators. Let our curators know why you’d be a great seller:',
-      label: 'Seller Application',
-      indexLabel: "Step 1 of 2" // formFields: [
-      //     {name: 'First Name', type: 'text', autocomplete: 'given-name', vModel: 'firstName'},
-      //     {name: 'Last Name', type: 'text', autocomplete: 'family-name', vModel: 'lastName'},
-      //     {name: 'Your Shop Category', type: 'select', autocomplete: 'off', vModel: 'shopCategory'},
-      //     {name: 'Portfolio Link', type: 'url', autocomplete: 'off', vModel: 'portfolioLink'},
-      //     {name: 'Do you already have an online store?', type: 'radio', autocomplete: 'off', vModel: 'existingStore'},
-      //     {name: 'Online stores I sell on today', type: 'textarea', autocomplete: 'off', vModel: 'existingStoreUrls'},
-      // ]
-
-    };
-  },
   components: {
-    'card': _components_card_vue__WEBPACK_IMPORTED_MODULE_0__.default,
-    'step-one': _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_1__.default,
-    'step-two': _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    'step-three': _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_3__.default
+    'app-header': _components_appHeader_vue__WEBPACK_IMPORTED_MODULE_0__.default,
+    'card': _components_card_vue__WEBPACK_IMPORTED_MODULE_1__.default,
+    'step-one': _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_2__.default,
+    'step-two': _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_3__.default,
+    'step-three': _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_4__.default
   }
 });
 
@@ -735,7 +668,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_3__.default({
   components: {
     App: _views_app_vue__WEBPACK_IMPORTED_MODULE_2__.default
   }
-}); // router.replace('/1')
+});
 
 /***/ }),
 
@@ -796,60 +729,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex_map_fields__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex-map-fields */ "./node_modules/vuex-map-fields/dist/index.esm.js");
 
 
-vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_1__.default);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_1__.default.Store({
+
+vue__WEBPACK_IMPORTED_MODULE_1__.default.use(vuex__WEBPACK_IMPORTED_MODULE_2__.default);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuex__WEBPACK_IMPORTED_MODULE_2__.default.Store({
   strict: "development" !== "production",
   state: {
-    currentStep: 1,
-    firstName: '',
-    lastName: '',
-    shopCategory: '',
-    portfolioLink: '',
-    existingStore: '',
-    existingStoreUrls: '',
-    email: '',
-    qualityPespective: '',
-    experienceLevel: '',
-    businessMarketing: ''
+    form: {
+      currentStep: 1,
+      firstName: '',
+      lastName: '',
+      shopCategory: '',
+      portfolioLink: '',
+      contentOwner: '',
+      existingStore: '',
+      existingStoreUrls: '',
+      qualityPerspective: '',
+      experienceLevel: '',
+      businessMarketing: ''
+    }
+  },
+  getters: {
+    getField: vuex_map_fields__WEBPACK_IMPORTED_MODULE_0__.getField
   },
   mutations: {
-    setCurrentStep: function setCurrentStep(state, payload) {
-      state.currentStep = payload.currentStep;
-    },
-    setFirstName: function setFirstName(state, payload) {
-      state.firstName = payload.firstName;
-    },
-    setLastName: function setLastName(state, payload) {
-      state.lastName = payload.lastName;
-    },
-    setShopCategory: function setShopCategory(state, payload) {
-      state.shopCategory = payload.shopCategory;
-    },
-    setPortfolioLink: function setPortfolioLink(state, payload) {
-      state.portfolioLink = payload.portfolioLink;
-    },
-    setExistingStore: function setExistingStore(state, payload) {
-      state.existingStore = payload.existingStore;
-    },
-    setExistingStoreUrls: function setExistingStoreUrls(state, payload) {
-      state.existingStoreUrls = payload.existingStoreUrls;
-    },
-    setEmail: function setEmail(state, payload) {
-      state.email = payload.email;
-    },
-    setQualityPespective: function setQualityPespective(state, payload) {
-      state.qualityPespective = payload.qualityPespective;
-    },
-    setExperienceLevel: function setExperienceLevel(state, payload) {
-      state.experienceLevel = payload.experienceLevel;
-    },
-    setBusinessMarketing: function setBusinessMarketing(state, payload) {
-      state.businessMarketing = payload.businessMarketing;
-    }
+    updateField: vuex_map_fields__WEBPACK_IMPORTED_MODULE_0__.updateField
   }
 }));
 
@@ -864,6 +772,44 @@ vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vuex__WEBPACK_IMPORTED_MODULE_1__.d
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "./resources/js/components/appHeader.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/appHeader.vue ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./appHeader.vue?vue&type=template&id=678fa15a& */ "./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a&");
+/* harmony import */ var _appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./appHeader.vue?vue&type=script&lang=js& */ "./resources/js/components/appHeader.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/appHeader.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
@@ -1209,6 +1155,21 @@ component.options.__file = "resources/js/views/app.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/appHeader.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/appHeader.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./appHeader.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/card.vue?vue&type=script&lang=js&":
 /*!*******************************************************************!*\
   !*** ./resources/js/components/card.vue?vue&type=script&lang=js& ***!
@@ -1341,6 +1302,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./app.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/app.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a& ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_appHeader_vue_vue_type_template_id_678fa15a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./appHeader.vue?vue&type=template&id=678fa15a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a&");
+
 
 /***/ }),
 
@@ -1488,6 +1465,39 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/appHeader.vue?vue&type=template&id=678fa15a& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "appHeader" }, [
+      _c("div", { staticClass: "appHeader__image" })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/card.vue?vue&type=template&id=c170f44a&":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/card.vue?vue&type=template&id=c170f44a& ***!
@@ -1613,7 +1623,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "formNavigation" }, [
     _c(
       "button",
       {
@@ -1625,13 +1635,17 @@ var render = function() {
             expression: "!isFirstStep() && !isSubmitted()"
           }
         ],
+        staticClass: "inputButton",
         on: {
           click: function($event) {
             return _vm.goBack()
           }
         }
       },
-      [_vm._v("\n        Back\n    ")]
+      [
+        _c("span", { staticClass: "chevron--left" }, [_vm._v("<")]),
+        _vm._v(" Back\n    ")
+      ]
     ),
     _vm._v(" "),
     _c(
@@ -1645,6 +1659,7 @@ var render = function() {
             expression: "!isSubmitted()"
           }
         ],
+        staticClass: "inputButton inputButton--green flex-self-end",
         on: {
           click: function($event) {
             return _vm.goForward()
@@ -1708,17 +1723,253 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "inputField__wrapper" }, [
-    _c(
-      "label",
-      { staticClass: "inputField__label", attrs: { for: _vm.name } },
-      [_vm._v(_vm._s(_vm.name))]
-    ),
+  return _c("div", [
+    _vm.type === "text" || _vm.type === "name" || _vm.type === "textarea"
+      ? _c("div", { staticClass: "inputField__wrapper" }, [
+          _c(
+            "label",
+            { staticClass: "inputField__label", attrs: { for: _vm.name } },
+            [_vm._v(_vm._s(_vm.label))]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "inputField",
+            attrs: {
+              id: _vm.name,
+              name: _vm.name,
+              type: _vm.type,
+              "v-model": _vm.name
+            }
+          })
+        ])
+      : _vm._e(),
     _vm._v(" "),
-    _c("input", {
-      staticClass: "inputField",
-      attrs: { name: _vm.name, type: _vm.type }
-    })
+    _vm.type === "select"
+      ? _c("div", { staticClass: "inputField__wrapper" }, [
+          _c(
+            "label",
+            { staticClass: "inputField__label", attrs: { for: _vm.name } },
+            [_vm._v(_vm._s(_vm.label))]
+          ),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              staticClass: "inputField",
+              attrs: { id: _vm.name, name: _vm.name, "v-model": _vm.name }
+            },
+            _vm._l(_vm.items, function(item) {
+              return _c(
+                "option",
+                { key: item.title, domProps: { value: item.value } },
+                [
+                  _vm._v(
+                    "\n                " + _vm._s(item.title) + "\n            "
+                  )
+                ]
+              )
+            }),
+            0
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.type === "checkbox"
+      ? _c("div", { staticClass: "inputField__wrapper" }, [
+          _vm.type === "checkbox"
+            ? _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.name,
+                    expression: "name"
+                  }
+                ],
+                attrs: { id: _vm.name, name: _vm.name, type: "checkbox" },
+                domProps: {
+                  checked: Array.isArray(_vm.name)
+                    ? _vm._i(_vm.name, null) > -1
+                    : _vm.name
+                },
+                on: {
+                  change: function($event) {
+                    var $$a = _vm.name,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = null,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.name = $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          (_vm.name = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
+                      }
+                    } else {
+                      _vm.name = $$c
+                    }
+                  }
+                }
+              })
+            : _vm.type === "radio"
+            ? _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.name,
+                    expression: "name"
+                  }
+                ],
+                attrs: { id: _vm.name, name: _vm.name, type: "radio" },
+                domProps: { checked: _vm._q(_vm.name, null) },
+                on: {
+                  change: function($event) {
+                    _vm.name = null
+                  }
+                }
+              })
+            : _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.name,
+                    expression: "name"
+                  }
+                ],
+                attrs: { id: _vm.name, name: _vm.name, type: _vm.type },
+                domProps: { value: _vm.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.name = $event.target.value
+                  }
+                }
+              }),
+          _vm._v(" "),
+          _vm.portfolioLink
+            ? _c("label", { attrs: { for: _vm.name } }, [
+                _vm._v(_vm._s(_vm.label))
+              ])
+            : _vm._e()
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.type === "radio"
+      ? _c("div", { staticClass: "inputField__wrapper" }, [
+          _c(
+            "div",
+            { key: _vm.item.value, attrs: { "v-for": _vm.item in _vm.items } },
+            [
+              _vm.radio === "checkbox"
+                ? _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.item.name,
+                        expression: "item.name"
+                      }
+                    ],
+                    attrs: {
+                      id: _vm.item.name,
+                      name: _vm.item.name,
+                      type: "checkbox"
+                    },
+                    domProps: {
+                      value: _vm.item.value,
+                      checked: Array.isArray(_vm.item.name)
+                        ? _vm._i(_vm.item.name, _vm.item.value) > -1
+                        : _vm.item.name
+                    },
+                    on: {
+                      change: function($event) {
+                        var $$a = _vm.item.name,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = _vm.item.value,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 &&
+                              _vm.$set(_vm.item, "name", $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              _vm.$set(
+                                _vm.item,
+                                "name",
+                                $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                              )
+                          }
+                        } else {
+                          _vm.$set(_vm.item, "name", $$c)
+                        }
+                      }
+                    }
+                  })
+                : _vm.radio === "radio"
+                ? _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.item.name,
+                        expression: "item.name"
+                      }
+                    ],
+                    attrs: {
+                      id: _vm.item.name,
+                      name: _vm.item.name,
+                      type: "radio"
+                    },
+                    domProps: {
+                      value: _vm.item.value,
+                      checked: _vm._q(_vm.item.name, _vm.item.value)
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.item, "name", _vm.item.value)
+                      }
+                    }
+                  })
+                : _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.item.name,
+                        expression: "item.name"
+                      }
+                    ],
+                    attrs: {
+                      id: _vm.item.name,
+                      name: _vm.item.name,
+                      type: _vm.radio
+                    },
+                    domProps: { value: _vm.item.value, value: _vm.item.name },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.item, "name", $event.target.value)
+                      }
+                    }
+                  }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: _vm.item.name } }, [
+                _vm._v(_vm._s(_vm.item.label))
+              ])
+            ]
+          )
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
@@ -1743,206 +1994,345 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "card" },
-    [
-      _vm.label || _vm.indexLabel
-        ? _c("div", { staticClass: "card__labelRow" }, [
-            _vm.label
-              ? _c("span", { staticClass: "card__label" }, [
-                  _vm._v("\n            " + _vm._s(_vm.label) + "\n        ")
-                ])
-              : _vm._e(),
+  return _c("div", { staticClass: "card-centre" }, [
+    _c(
+      "div",
+      { staticClass: "card" },
+      [
+        _vm.label || _vm.indexLabel
+          ? _c("div", { staticClass: "card__labelRow" }, [
+              _vm.label
+                ? _c("span", { staticClass: "card__label" }, [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.label) +
+                        "\n            "
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.indexLabel
+                ? _c("span", { staticClass: "card__indexLabel" }, [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.indexLabel) +
+                        "\n            "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.title
+          ? _c("h1", { staticClass: "card__heading" }, [
+              _vm._v(_vm._s(_vm.title))
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.textContent
+          ? _c("div", { staticClass: "card__textContent" }, [
+              _c("p", [_vm._v(_vm._s(_vm.textContent))])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width50" }, [
+          _c("label", { attrs: { for: "firstName" } }, [_vm._v("First Name")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.firstName,
+                expression: "firstName"
+              }
+            ],
+            attrs: {
+              type: "text",
+              id: "firstName",
+              name: "firstName",
+              autocomplete: "given-name"
+            },
+            domProps: { value: _vm.firstName },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.firstName = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width50" }, [
+          _c("label", { attrs: { for: "lastName" } }, [_vm._v("Last Name")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.lastName,
+                expression: "lastName"
+              }
+            ],
+            attrs: {
+              type: "text",
+              id: "lastName",
+              name: "lastName",
+              autocomplete: "family-name"
+            },
+            domProps: { value: _vm.lastName },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.lastName = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c("label", { attrs: { for: "shopCategory", autocomplete: "off" } }, [
+            _vm._v("Your Shop Category")
+          ]),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.shopCategory,
+                  expression: "shopCategory"
+                }
+              ],
+              attrs: { type: "text", id: "shopCategory", name: "shopCategory" },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.shopCategory = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", [_vm._v("Graphics")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Fonts")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Templates")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Add-ons")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Photos")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("Web Themes")]),
+              _vm._v(" "),
+              _c("option", [_vm._v("3D")])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c(
+            "label",
+            { attrs: { for: "portfolioLink", autocomplete: "off" } },
+            [_vm._v("Portfolio Link")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.portfolioLink,
+                expression: "portfolioLink"
+              }
+            ],
+            attrs: { type: "url", id: "portfolioLink", name: "portfolioLink" },
+            domProps: { value: _vm.portfolioLink },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.portfolioLink = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _vm.portfolioLink
+            ? _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.contentOwner,
+                    expression: "contentOwner"
+                  }
+                ],
+                attrs: {
+                  type: "checkbox",
+                  id: "contentOwner",
+                  name: "contentOwner"
+                },
+                domProps: {
+                  checked: Array.isArray(_vm.contentOwner)
+                    ? _vm._i(_vm.contentOwner, null) > -1
+                    : _vm.contentOwner
+                },
+                on: {
+                  change: function($event) {
+                    var $$a = _vm.contentOwner,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = null,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.contentOwner = $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          (_vm.contentOwner = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
+                      }
+                    } else {
+                      _vm.contentOwner = $$c
+                    }
+                  }
+                }
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.portfolioLink
+            ? _c("label", { attrs: { for: "contentnOwner" } }, [
+                _vm._v(
+                  "Yes, I confirm that the content I submit is authored by me."
+                )
+              ])
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100 inputField--radio" }, [
+          _c("label", { attrs: { for: "existingStore" } }, [
+            _vm._v("Do you already have an online store?")
+          ]),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "existingStoreYes" } }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.existingStore,
+                  expression: "existingStore"
+                }
+              ],
+              attrs: {
+                type: "radio",
+                id: "existingStoreYes",
+                name: "existingStoreYes",
+                value: "yes"
+              },
+              domProps: { checked: _vm._q(_vm.existingStore, "yes") },
+              on: {
+                change: function($event) {
+                  _vm.existingStore = "yes"
+                }
+              }
+            }),
             _vm._v(" "),
-            _vm.indexLabel
-              ? _c("span", { staticClass: "card__indexLabel" }, [
-                  _vm._v(
-                    "\n            " + _vm._s(_vm.indexLabel) + "\n        "
-                  )
-                ])
-              : _vm._e()
+            _c("span", { staticClass: "selected" }),
+            _vm._v("\n                Yes\n            ")
+          ]),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "existingStoreNo" } }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.existingStore,
+                  expression: "existingStore"
+                }
+              ],
+              attrs: {
+                type: "radio",
+                id: "existingStoreNo",
+                name: "existingStoreNo",
+                value: "no"
+              },
+              domProps: { checked: _vm._q(_vm.existingStore, "no") },
+              on: {
+                change: function($event) {
+                  _vm.existingStore = "no"
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "selected" }),
+            _vm._v("\n                No\n            ")
           ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.title
-        ? _c("h1", { staticClass: "card__heading" }, [
-            _vm._v(_vm._s(_vm.title))
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.textContent
-        ? _c("div", { staticClass: "card__textContent" }, [
-            _c("p", [_vm._v(_vm._s(_vm.textContent))])
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "firstName" } }, [_vm._v("First Name")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.firstName,
-            expression: "firstName"
-          }
-        ],
-        attrs: {
-          type: "text",
-          id: "firstName",
-          name: "firstName",
-          autocomplete: "given-name"
-        },
-        domProps: { value: _vm.firstName },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.firstName = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "lastName" } }, [_vm._v("Last Name")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.lastName,
-            expression: "lastName"
-          }
-        ],
-        attrs: {
-          type: "text",
-          id: "lastName",
-          name: "lastName",
-          autocomplete: "family-name"
-        },
-        domProps: { value: _vm.lastName },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.lastName = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "shopCategory", autocomplete: "off" } }, [
-        _vm._v("Your Shop Category")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.shopCategory,
-            expression: "shopCategory"
-          }
-        ],
-        attrs: { type: "text", id: "shopCategory", name: "shopCategory" },
-        domProps: { value: _vm.shopCategory },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.shopCategory = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "portfolioLink", autocomplete: "off" } }, [
-        _vm._v("Portfolio Link")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.portfolioLink,
-            expression: "portfolioLink"
-          }
-        ],
-        attrs: { type: "url", id: "portfolioLink", name: "portfolioLink" },
-        domProps: { value: _vm.portfolioLink },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.portfolioLink = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "existingStore" } }, [
-        _vm._v("Do you already have an online store?")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.existingStore,
-            expression: "existingStore"
-          }
-        ],
-        attrs: { type: "text", id: "existingStore", name: "existingStore" },
-        domProps: { value: _vm.existingStore },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.existingStore = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c(
-        "label",
-        { attrs: { for: "existingStoreUrls", autocomplete: "off" } },
-        [_vm._v("Online stores I sell on today")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.existingStoreUrls,
-            expression: "existingStoreUrls"
-          }
-        ],
-        attrs: {
-          type: "textarea",
-          id: "existingStoreUrls",
-          name: "existingStoreUrls"
-        },
-        domProps: { value: _vm.existingStoreUrls },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.existingStoreUrls = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("form-navigation")
-    ],
-    1
-  )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _vm.existingStore === "yes"
+            ? _c(
+                "label",
+                { attrs: { for: "existingStoreUrls", autocomplete: "off" } },
+                [_vm._v("Online stores I sell on today")]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.existingStore === "yes"
+            ? _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.existingStoreUrls,
+                    expression: "existingStoreUrls"
+                  }
+                ],
+                attrs: {
+                  rows: "3",
+                  id: "existingStoreUrls",
+                  name: "existingStoreUrls"
+                },
+                domProps: { value: _vm.existingStoreUrls },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.existingStoreUrls = $event.target.value
+                  }
+                }
+              })
+            : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("form-navigation")
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1966,26 +2356,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "card" },
-    [
-      _vm.title
-        ? _c("h1", { staticClass: "card__heading" }, [
-            _vm._v(_vm._s(_vm.title))
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.textContent
-        ? _c("div", { staticClass: "card__textContent" }, [
-            _c("p", [_vm._v(_vm._s(_vm.textContent))])
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("form-navigation")
-    ],
-    1
-  )
+  return _c("div", { staticClass: "card-centre" }, [
+    _c(
+      "div",
+      { staticClass: "card card--success" },
+      [
+        _c("div", { staticClass: "card__submitImage" }),
+        _vm._v(" "),
+        _vm.title
+          ? _c("h1", { staticClass: "card__heading successPanel" }, [
+              _vm._v(_vm._s(_vm.title))
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.textContent
+          ? _c("div", { staticClass: "card__textContent--success" }, [
+              _c("p", { domProps: { innerHTML: _vm._s(_vm.textContent) } })
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("form-navigation")
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2009,248 +2403,266 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "card" },
-    [
-      _vm.label || _vm.indexLabel
-        ? _c("div", { staticClass: "card__labelRow" }, [
-            _vm.label
-              ? _c("span", { staticClass: "card__label" }, [
-                  _vm._v(
-                    "\n                " + _vm._s(_vm.label) + "\n            "
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.indexLabel
-              ? _c("span", { staticClass: "card__indexLabel" }, [
-                  _vm._v(
-                    "\n                " +
-                      _vm._s(_vm.indexLabel) +
-                      "\n            "
-                  )
-                ])
-              : _vm._e()
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.title
-        ? _c("h1", { staticClass: "card__heading" }, [
-            _vm._v(_vm._s(_vm.title))
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.textContent
-        ? _c("div", { staticClass: "card__textContent" }, [
-            _c("p", [_vm._v(_vm._s(_vm.textContent))])
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "qualityPespective" } }, [
-        _vm._v(
-          "When creating products to sell, which best describes your perspective on quality?"
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
+  return _c("div", { staticClass: "card-centre" }, [
+    _c(
+      "div",
+      { staticClass: "card" },
+      [
+        _vm.label || _vm.indexLabel
+          ? _c("div", { staticClass: "card__labelRow" }, [
+              _vm.label
+                ? _c("span", { staticClass: "card__label" }, [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.label) +
+                        "\n            "
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.indexLabel
+                ? _c("span", { staticClass: "card__indexLabel" }, [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(_vm.indexLabel) +
+                        "\n            "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.title
+          ? _c("h1", { staticClass: "card__heading" }, [
+              _vm._v(_vm._s(_vm.title))
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.textContent
+          ? _c("div", { staticClass: "card__textContent" }, [
+              _c("p", [_vm._v(_vm._s(_vm.textContent))])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c("label", { attrs: { for: "qualityPerspective" } }, [
+            _vm._v(
+              "When creating products to sell, which best describes your perspective on quality?"
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "select",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.qualityPespective,
-              expression: "qualityPespective"
-            }
-          ],
-          attrs: {
-            type: "text",
-            id: "qualityPespective",
-            name: "qualityPespective",
-            autocomplete: "off"
-          },
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.qualityPespective = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        [
-          _c("option", { attrs: { value: "5" } }, [
-            _vm._v(
-              "I don’t care what it takes, my products are the highest quality possible."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "4" } }, [
-            _vm._v(
-              "I put in enough effort to make my product pretty high quality, but at some point my time is better spent elsewhere."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [
-            _vm._v(
-              "I try to get quality products out quickly, even if I need to take a shortcut now and then."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [
-            _vm._v(
-              "I spend the minimum amount of time & effort it takes to create products that are acceptable quality."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [
-            _vm._v("Quantity is more important to me than quality.")
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "experienceLevel" } }, [
-        _vm._v(
-          "How would you describe your experience level as an online seller?"
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.experienceLevel,
-              expression: "experienceLevel"
-            }
-          ],
-          attrs: {
-            type: "text",
-            id: "experienceLevel",
-            name: "experienceLevel",
-            autocomplete: "off"
-          },
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.experienceLevel = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        [
-          _c("option", { attrs: { value: "5" } }, [
-            _vm._v(
-              "I sell on multiple marketplaces and through my own website."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "4" } }, [
-            _vm._v("I have experience selling through only my own website.")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [
-            _vm._v("I have experience selling through multiple marketplaces.")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [
-            _vm._v("I have experience selling through one online marketplace.")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [
-            _vm._v("I’m new to selling creative products online.")
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "label",
-        { attrs: { for: "businessMarketing", autocomplete: "off" } },
-        [
-          _vm._v(
-            "How would you describe your understanding of business and marketing?"
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.qualityPerspective,
+                  expression: "qualityPerspective"
+                }
+              ],
+              attrs: {
+                type: "text",
+                id: "qualityPerspective",
+                name: "qualityPerspective",
+                autocomplete: "off"
+              },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.qualityPerspective = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { value: "5" } }, [
+                _vm._v(
+                  "I don’t care what it takes, my products are the highest quality possible."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "4" } }, [
+                _vm._v(
+                  "I put in enough effort to make my product pretty high quality, but at some point my time is better spent elsewhere."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "3" } }, [
+                _vm._v(
+                  "I try to get quality products out quickly, even if I need to take a shortcut now and then."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "2" } }, [
+                _vm._v(
+                  "I spend the minimum amount of time & effort it takes to create products that are acceptable quality."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1" } }, [
+                _vm._v("Quantity is more important to me than quality.")
+              ])
+            ]
           )
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c("label", { attrs: { for: "experienceLevel" } }, [
+            _vm._v(
+              "How would you describe your experience level as an online seller?"
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "select",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.businessMarketing,
-              expression: "businessMarketing"
-            }
-          ],
-          attrs: {
-            type: "text",
-            id: "businessMarketing",
-            name: "businessMarketing",
-            autocomplete: "off"
-          },
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.businessMarketing = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        [
-          _c("option", { attrs: { value: "4" } }, [
-            _vm._v(
-              "I have an extensive background in business and/or marketing."
-            )
-          ]),
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.experienceLevel,
+                  expression: "experienceLevel"
+                }
+              ],
+              attrs: {
+                type: "text",
+                id: "experienceLevel",
+                name: "experienceLevel",
+                autocomplete: "off"
+              },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.experienceLevel = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { value: "5" } }, [
+                _vm._v(
+                  "I sell on multiple marketplaces and through my own website."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "4" } }, [
+                _vm._v("I have experience selling through only my own website.")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "3" } }, [
+                _vm._v(
+                  "I have experience selling through multiple marketplaces."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "2" } }, [
+                _vm._v(
+                  "I have experience selling through one online marketplace."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1" } }, [
+                _vm._v("I’m new to selling creative products online.")
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inputField width100" }, [
+          _c(
+            "label",
+            { attrs: { for: "businessMarketing", autocomplete: "off" } },
+            [
+              _vm._v(
+                "How would you describe your understanding of business and marketing?"
+              )
+            ]
+          ),
           _vm._v(" "),
-          _c("option", { attrs: { value: "3" } }, [
-            _vm._v(
-              "I’m familiar with some skills & techniques, but I’m not sure how to apply them when selling my creative work."
-            )
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "2" } }, [
-            _vm._v("I’m vaguely aware of basic business & marketing concepts.")
-          ]),
-          _vm._v(" "),
-          _c("option", { attrs: { value: "1" } }, [
-            _vm._v("I’m not interested in understanding business & marketing.")
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("form-navigation")
-    ],
-    1
-  )
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.businessMarketing,
+                  expression: "businessMarketing"
+                }
+              ],
+              attrs: {
+                type: "text",
+                id: "businessMarketing",
+                name: "businessMarketing",
+                autocomplete: "off"
+              },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.businessMarketing = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { value: "4" } }, [
+                _vm._v(
+                  "I have an extensive background in business and/or marketing."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "3" } }, [
+                _vm._v(
+                  "I’m familiar with some skills & techniques, but I’m not sure how to apply them when selling my creative work."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "2" } }, [
+                _vm._v(
+                  "I’m vaguely aware of basic business & marketing concepts."
+                )
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1" } }, [
+                _vm._v(
+                  "I’m not interested in understanding business & marketing."
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("form-navigation")
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2277,6 +2689,8 @@ var render = function() {
   return _c(
     "div",
     [
+      _c("app-header"),
+      _vm._v(" "),
       this.$route.path === "/" ? _c("step-one") : _vm._e(),
       _vm._v(" "),
       this.$route.path === "/2" ? _c("step-two") : _vm._e(),
@@ -17547,6 +17961,222 @@ function getOuterHTML (el) {
 Vue.compile = compileToFunctions;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Vue);
+
+
+/***/ }),
+
+/***/ "./node_modules/vuex-map-fields/dist/index.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vuex-map-fields/dist/index.esm.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createHelpers": () => (/* binding */ createHelpers),
+/* harmony export */   "getField": () => (/* binding */ getField),
+/* harmony export */   "mapFields": () => (/* binding */ mapFields),
+/* harmony export */   "mapMultiRowFields": () => (/* binding */ mapMultiRowFields),
+/* harmony export */   "updateField": () => (/* binding */ updateField)
+/* harmony export */ });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function arrayToObject() {
+  var fields = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  return fields.reduce(function (prev, path) {
+    var key = path.split(".").slice(-1)[0];
+
+    if (prev[key]) {
+      throw new Error("The key `".concat(key, "` is already in use."));
+    } // eslint-disable-next-line no-param-reassign
+
+
+    prev[key] = path;
+    return prev;
+  }, {});
+}
+
+function objectEntries(obj) {
+  return Object.keys(obj).map(function (key) {
+    return [key, obj[key]];
+  });
+}
+
+function normalizeNamespace(fn) {
+  return function () {
+    for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
+      params[_key] = arguments[_key];
+    }
+
+    // eslint-disable-next-line prefer-const
+    var _ref = typeof params[0] === "string" ? [].concat(params) : [""].concat(params),
+        _ref2 = _slicedToArray(_ref, 4),
+        namespace = _ref2[0],
+        map = _ref2[1],
+        getterType = _ref2[2],
+        mutationType = _ref2[3];
+
+    if (namespace.length && namespace.charAt(namespace.length - 1) !== "/") {
+      namespace += "/";
+    }
+
+    getterType = "".concat(namespace).concat(getterType || "getField");
+    mutationType = "".concat(namespace).concat(mutationType || "updateField");
+    return fn(namespace, map, getterType, mutationType);
+  };
+}
+
+function getField(state) {
+  return function (path) {
+    return path.split(/[.[\]]+/).reduce(function (prev, key) {
+      return prev[key];
+    }, state);
+  };
+}
+function updateField(state, _ref3) {
+  var path = _ref3.path,
+      value = _ref3.value;
+  path.split(/[.[\]]+/).reduce(function (prev, key, index, array) {
+    if (array.length === index + 1) {
+      // eslint-disable-next-line no-param-reassign
+      prev[key] = value;
+    }
+
+    return prev[key];
+  }, state);
+}
+var mapFields = normalizeNamespace(function (namespace, fields, getterType, mutationType) {
+  var fieldsObject = Array.isArray(fields) ? arrayToObject(fields) : fields;
+  return Object.keys(fieldsObject).reduce(function (prev, key) {
+    var path = fieldsObject[key];
+    var field = {
+      get: function get() {
+        return this.$store.getters[getterType](path);
+      },
+      set: function set(value) {
+        this.$store.commit(mutationType, {
+          path: path,
+          value: value
+        });
+      }
+    }; // eslint-disable-next-line no-param-reassign
+
+    prev[key] = field;
+    return prev;
+  }, {});
+});
+var mapMultiRowFields = normalizeNamespace(function (namespace, paths, getterType, mutationType) {
+  var pathsObject = Array.isArray(paths) ? arrayToObject(paths) : paths;
+  return Object.keys(pathsObject).reduce(function (entries, key) {
+    var path = pathsObject[key]; // eslint-disable-next-line no-param-reassign
+
+    entries[key] = {
+      get: function get() {
+        var store = this.$store;
+        var rows = objectEntries(store.getters[getterType](path));
+        return rows.map(function (fieldsObject) {
+          return Object.keys(fieldsObject[1]).reduce(function (prev, fieldKey) {
+            var fieldPath = "".concat(path, "[").concat(fieldsObject[0], "].").concat(fieldKey);
+            return Object.defineProperty(prev, fieldKey, {
+              get: function get() {
+                return store.getters[getterType](fieldPath);
+              },
+              set: function set(value) {
+                store.commit(mutationType, {
+                  path: fieldPath,
+                  value: value
+                });
+              }
+            });
+          }, {});
+        });
+      }
+    };
+    return entries;
+  }, {});
+});
+var createHelpers = function createHelpers(_ref4) {
+  var _ref5;
+
+  var getterType = _ref4.getterType,
+      mutationType = _ref4.mutationType;
+  return _ref5 = {}, _defineProperty(_ref5, getterType, getField), _defineProperty(_ref5, mutationType, updateField), _defineProperty(_ref5, "mapFields", normalizeNamespace(function (namespace, fields) {
+    return mapFields(namespace, fields, getterType, mutationType);
+  })), _defineProperty(_ref5, "mapMultiRowFields", normalizeNamespace(function (namespace, paths) {
+    return mapMultiRowFields(namespace, paths, getterType, mutationType);
+  })), _ref5;
+};
+
+
 
 
 /***/ }),

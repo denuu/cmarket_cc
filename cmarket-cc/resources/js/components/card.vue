@@ -48,11 +48,6 @@ export default {
             type: Array
         }
     },
-    data () {
-        return {
-            // title: 'Share your work with us',
-        }
-    },
     components: {
         'form-component': formComponent,
         'input-button': inputButton,

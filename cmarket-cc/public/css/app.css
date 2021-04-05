@@ -1,25 +1,109 @@
-.button {
+.appHeader {
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+@media screen and (min-width: 768px) {
+  .appHeader {
+    padding: 16px 55px;
+    box-shadow: none;
+    justify-content: flex-start;
+  }
+}
+.appHeader__image {
+  background-image: url(/images/logo.png?ad1a06e4ab47f9d495ddefb037a895a4);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 38px;
+  width: 98px;
+}
+
+.inputButton {
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 13px 0;
   border: none;
   border-radius: 4px;
+  color: #008980;
+  background: #fff;
+  border: #fff;
+  display: inline-block;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .inputButton {
+    width: auto;
+  }
+}
+.inputButton--green {
+  background: #008980;
   color: #fff;
+  padding: 13px 48px;
+}
+@media screen and (min-width: 768px) {
+  .inputButton--green {
+    min-width: 152px;
+  }
+}
+.inputButton .chevron--left {
+  transform: scale(0.65, 1);
+  margin-right: 0.4rem;
+}
+
+.formNavigation {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .formNavigation {
+    flex-flow: row nowrap;
+  }
+}
+.formNavigation .flex-self-end {
+  margin-left: auto;
 }
 
 .card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
-  max-width: 657px;
   margin: 0 auto;
   background: #fff;
   box-shadow: none;
   height: calc(100vh - 87px);
+  margin-top: 88px;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 @media screen and (min-width: 768px) {
   .card {
     height: 100%;
+    min-height: 483px;
     box-shadow: 0px 2px 10px rgba(226, 233, 238, 0.6);
+    max-width: 657px;
+    border-radius: 8px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 40px 40px;
   }
 }
 .card__labelRow {
@@ -27,9 +111,9 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .card__label, .card__indexLabel {
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
   color: #303538;
   font-size: 12px;
@@ -38,21 +122,125 @@
   text-transform: uppercase;
 }
 .card__heading {
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
   color: #303538;
   font-size: 24px;
-  line-height: calc(34px / 24px);
+  line-height: calc(34 / 24);
+}
+.card__textContent {
+  font-size: 16px;
+  line-height: calc(22 / 16);
+}
+.card__submitImage {
+  background-image: url(/images/plane.png?a83785ed2c199553922412155354cb9f);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 126px;
+  width: 100%;
+}
+.card--success {
+  max-height: 520px;
+  margin: 88px 10px 0;
+}
+@media screen and (min-width: 768px) {
+  .card--success {
+    margin: 88px auto auto;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    margin-top: 88px;
+  }
+}
+.card--success * {
+  text-align: center;
+  max-width: 514px;
+  margin: 0 auto;
 }
 
-.input {
+.inputField {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px 0;
+}
+.inputField label {
+  font-size: 14px;
+  line-height: calc(15 / 14);
+}
+.inputField input[type=text],
+.inputField input[type=textarea],
+.inputField input[type=name],
+.inputField input[type=url],
+.inputField textarea,
+.inputField select {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  padding: 8px;
   background: #FBFBFD;
   border: 1px solid #899298;
   border-radius: 4px;
   box-sizing: border-box;
+  width: 100%;
+}
+.inputField input[type=text] ::-moz-placeholder, .inputField input[type=textarea] ::-moz-placeholder, .inputField input[type=name] ::-moz-placeholder, .inputField input[type=url] ::-moz-placeholder, .inputField textarea ::-moz-placeholder, .inputField select ::-moz-placeholder {
+  color: #6E777D;
+}
+.inputField input[type=text] :-ms-input-placeholder, .inputField input[type=textarea] :-ms-input-placeholder, .inputField input[type=name] :-ms-input-placeholder, .inputField input[type=url] :-ms-input-placeholder, .inputField textarea :-ms-input-placeholder, .inputField select :-ms-input-placeholder {
+  color: #6E777D;
+}
+.inputField input[type=text] ::placeholder,
+.inputField input[type=textarea] ::placeholder,
+.inputField input[type=name] ::placeholder,
+.inputField input[type=url] ::placeholder,
+.inputField textarea ::placeholder,
+.inputField select ::placeholder {
+  color: #6E777D;
+}
+.inputField--radio > label:not(:first-child) {
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  font-weight: 500;
+  padding-top: 12px;
+}
+.inputField.width50 {
+  width: calc(50% - 10px);
+}
+.inputField.width100 {
+  width: 100%;
 }
 
 html {
   background: #fff;
   background-image: url(/images/background.png?a2913027eb796b17670984ba2d9c5573);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 100vh;
+}
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.card-centre {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .card-centre {
+    top: 139px;
+  }
+}
+
+h1,
+label {
+  font-weight: 600;
 }
