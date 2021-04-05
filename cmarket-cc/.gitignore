@@ -3,7 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
-.env
+# .env # Because this is being submitted, needs to be committed.
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml
