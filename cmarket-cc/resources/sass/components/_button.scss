@@ -8,9 +8,9 @@
     padding: 13px 0;
     border: none;
     border-radius: 4px;
-    color: #008980;
-    background: #fff;
-    border: #fff;
+    color: $green;
+    background: $white;
+    border: $white;
     display: inline-block;
     width: 100%;
     margin: 0.5rem auto;
@@ -21,7 +21,7 @@
     }
 
     &--green {
-        background: #008980;
+        background: $green;
         color: $white;
         padding: 13px 48px;
 

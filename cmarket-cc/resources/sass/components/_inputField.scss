@@ -26,7 +26,7 @@
 
         ::placeholder {
             // Handle browser prefixes with Webpack.
-            color: #6E777D;
+            color: $darkGrey;
         }
     }
 
@@ -38,7 +38,7 @@
             font-size: 16px;
             line-height: calc(22 / 16);
             font-weight: 500;
-            color: #303538;
+            color: $coolGrey;
         }
     }
 
@@ -51,14 +51,12 @@
             font-size: 16px;
             line-height: calc(22 / 16);
             font-weight: 500;
-            // padding-top: 12px;
-            color: #303538;
+            color: $coolGrey;
         }
 
         [type=radio]:checked,
         [type=radio]:not(:checked) {
             position: absolute;
-            // left: -9999px;
             display: none;
         }
 
@@ -78,13 +76,13 @@
             top: 0;
             width: 16px;
             height: 16px;
-            border: 2px solid #899298;
+            border: 2px solid $grey;
             border-radius: 100%;
-            background: #fff;
+            background: $white;
         }
 
         [type=radio]:checked+label:before {
-            border-color: #008980;
+            border-color: $green;
         }
 
         [type=radio]:checked+label:after,
@@ -92,7 +90,7 @@
             content: '';
             width: 6px;
             height: 6px;
-            background: #39B4AC;
+            background: $lightGreen;
             position: absolute;
             top: 7px;
             left: 7px;

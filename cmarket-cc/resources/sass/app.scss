@@ -1,10 +1,9 @@
 @import '_variables';
 @import 'components/appHeader';
 @import 'components/button';
-@import 'components/formNavigation.scss';
+@import 'components/formNavigation';
 @import 'components/card';
 @import 'components/inputField';
-
 
 html {
     background: $white;
