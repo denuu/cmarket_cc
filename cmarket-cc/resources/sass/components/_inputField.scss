@@ -1,0 +1,123 @@
+.inputField {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10px 0;
+
+    label {
+        font-size: 14px;
+        line-height: calc(15 / 14);
+    }
+
+    input[type=text],
+    input[type=textarea],
+    input[type=name],
+    input[type=url],
+    textarea,
+    select {
+        margin: 8px 0;
+        font-size: 16px;
+        line-height: calc(22 / 16);
+        padding: 8px;
+        background: $lightGrey;
+        border: 1px solid $grey;
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: 100%;
+
+        ::placeholder {
+            // Handle browser prefixes with Webpack.
+            color: $darkGrey;
+        }
+    }
+
+    &--checkbox {
+        margin-top: -18px;
+        margin-left: -3px;
+
+        > label {
+            font-size: 16px;
+            line-height: calc(22 / 16);
+            font-weight: 500;
+            color: $coolGrey;
+        }
+    }
+
+    &--radio {
+        > div {
+            padding-top: 12px;
+        }
+
+        label:not(:first-child) {
+            font-size: 16px;
+            line-height: calc(22 / 16);
+            font-weight: 500;
+            color: $coolGrey;
+        }
+
+        [type=radio]:checked,
+        [type=radio]:not(:checked) {
+            position: absolute;
+            display: none;
+        }
+
+        [type=radio]:checked+label,
+        [type=radio]:not(:checked)+label {
+            position: relative;
+            padding-left: 26px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        [type=radio]:checked+label:before,
+        [type=radio]:not(:checked)+label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border: 2px solid $grey;
+            border-radius: 100%;
+            background: $white;
+        }
+
+        [type=radio]:checked+label:before {
+            border-color: $green;
+        }
+
+        [type=radio]:checked+label:after,
+        [type=radio]:not(:checked)+label:after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: $lightGreen;
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        [type=radio]:not(:checked)+label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        [type=radio]:checked+label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    // Ensure a 20px gap with justify space-between in `.card`.
+    &.width50 {
+        width: calc(50% - 10px);
+    }
+
+    &.width100 {
+        width: 100%;
+    }
+}

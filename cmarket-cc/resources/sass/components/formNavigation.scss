@@ -4,9 +4,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-bottom: 60px;
 
     @media screen and (min-width: 768px) {
         flex-flow: row nowrap;
+        padding-bottom: auto;
     }
 
     // When only visible button, keep aligned right.

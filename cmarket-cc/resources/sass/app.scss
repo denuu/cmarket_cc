@@ -1,18 +1,23 @@
 @import '_variables';
 @import 'components/appHeader';
 @import 'components/button';
-@import 'components/formNavigation.scss';
+@import 'components/formNavigation';
 @import 'components/card';
-@import 'components/input';
-
+@import 'components/inputField';
 
 html {
     background: $white;
-    background-image: url('../images/background.png');
-    background-position: bottom center;
-    background-repeat: no-repeat;
     font-family: Helvetica, Arial, sans-serif;
     height: 100vh;
+    max-width: 1600px; // Assume width beyond mockup requires gutters.
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        background-image: url('../images/background.png');
+        background-position: center 500px;
+        background-repeat: no-repeat;
+        background-size: 1600px auto;
+    }
     
     * {
         box-sizing: border-box;

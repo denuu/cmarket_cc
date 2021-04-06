@@ -9,17 +9,13 @@
 
 <script>
 import AppHeader from '../components/appHeader.vue'
-import Card from '../components/card.vue'
 import StepOne from '../components/steps/stepOne.vue'
 import StepTwo from '../components/steps/stepTwo.vue'
 import StepThree from '../components/steps/stepThree.vue'
 
-// const default_layout = "default"
-
 export default {
     components: {
 		'app-header': AppHeader,
-        'card': Card,
 		'step-one': StepOne,
 		'step-two': StepTwo,
 		'step-three': StepThree,

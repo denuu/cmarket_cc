@@ -25,14 +25,6 @@ const routes = [
 ];
 
 export default new VueRouter({
-    // mode: "history"
+    mode: "history",
     routes
 });
-
-// router.beforeEach((to, from, next) => {
-//     if (to.path === '/4' && !store.state.hasFourthStep) {
-//         next(false)
-//     } else {
-//         next()
-//     }
-// })
