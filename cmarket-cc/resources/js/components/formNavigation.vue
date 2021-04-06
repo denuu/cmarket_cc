@@ -30,11 +30,11 @@
 // import InputButton from './inputButton.vue'
 
 export default {
-    data() {
-        return {
-            sellerApplication: {}
-        }
-    },
+    // data() {
+    //     return {
+    //         sellerApplication: {}
+    //     }
+    // },
     methods: {
         nextButtonText() {
             if (this.$route.name === 'secondStep') {

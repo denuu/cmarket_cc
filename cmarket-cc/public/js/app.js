@@ -2011,11 +2011,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 // import InputButton from './inputButton.vue'
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      sellerApplication: {}
-    };
-  },
+  // data() {
+  //     return {
+  //         sellerApplication: {}
+  //     }
+  // },
   methods: {
     nextButtonText: function nextButtonText() {
       if (this.$route.name === 'secondStep') {
