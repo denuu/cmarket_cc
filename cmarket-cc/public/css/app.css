@@ -190,10 +190,10 @@
   width: 100%;
 }
 .inputField input[type=text] ::-moz-placeholder, .inputField input[type=textarea] ::-moz-placeholder, .inputField input[type=name] ::-moz-placeholder, .inputField input[type=url] ::-moz-placeholder, .inputField textarea ::-moz-placeholder, .inputField select ::-moz-placeholder {
-  color: #6E777D;
+  color: #6e777d;
 }
 .inputField input[type=text] :-ms-input-placeholder, .inputField input[type=textarea] :-ms-input-placeholder, .inputField input[type=name] :-ms-input-placeholder, .inputField input[type=url] :-ms-input-placeholder, .inputField textarea :-ms-input-placeholder, .inputField select :-ms-input-placeholder {
-  color: #6E777D;
+  color: #6e777d;
 }
 .inputField input[type=text] ::placeholder,
 .inputField input[type=textarea] ::placeholder,
@@ -201,7 +201,7 @@
 .inputField input[type=url] ::placeholder,
 .inputField textarea ::placeholder,
 .inputField select ::placeholder {
-  color: #6E777D;
+  color: #6e777d;
 }
 .inputField--checkbox {
   margin-top: -18px;
@@ -254,7 +254,7 @@
   content: "";
   width: 6px;
   height: 6px;
-  background: #39B4AC;
+  background: #39b4ac;
   position: absolute;
   top: 7px;
   left: 7px;
