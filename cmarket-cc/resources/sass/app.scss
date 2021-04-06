@@ -12,7 +12,10 @@ html {
     background-position: bottom center;
     background-repeat: no-repeat;
     font-family: Helvetica, Arial, sans-serif;
+    // width: 100vw;
     height: 100vh;
+    max-width: 1440px; // Assume width beyond mockup requires gutters.
+    margin: 0 auto;
     
     * {
         box-sizing: border-box;
