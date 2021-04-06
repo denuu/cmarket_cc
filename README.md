@@ -6,9 +6,10 @@ To start:
 - Run `npm run dev` to compile style and script assets.
 - In a new terminal instance, run `PHP artisan serve` to run the Laravel application.
 - In yet another terminal instance, run `./vendor/bin/sail artisan migrate` to run migrations and create the table necessary for this app.
+- Project should be visible at `http://127.0.0.1:8000/`.
 
 ## Known issues:
-- Submission fails due to a MySQL error:
+- Submission does not work. It fails due to a MySQL issue I haven't yet been able to resolve:
     - If `DB_HOST` in `.env` set to `mysql`, `./vendor/bin/sail artisan migrate` will work - but upon running INSERT query MySQL will return error `SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known`.
     - If `DB_HOST` in `.env` set to `127.0.0.1` then `./vendor/bin/sail artisan migrate` will result in refused connection, while `php artisan migrate` will result in `The server requested authentication method unknown to the client`.
     - If `DB_HOST` in `.env` set to `localhost` then `./vendor/bin/sail artisan migrate` and `php artisan migrate` will _both_ result in `No such file or directory`.
@@ -28,6 +29,7 @@ To start:
 - Form/field validation.
 - Prevent access to submit step via address bar.
 - Lazy/chunk load styles and scripts via a more fun and involved webpack config.
+- Cache busting on assets with `.version`.
 - Create `inputField` component that takes a `name`, `field type`, `width`, associated `vue model`.
 - Create `inputButton` comonent that takes optional `colour` parameter but defaults to green-text-on-white, button `title`, `target`, and `url/action`.
 - Create custom styled OS element replacements for Select options.
