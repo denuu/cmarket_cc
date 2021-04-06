@@ -1,4 +1,4 @@
-# cmarket_cc
+# Take-home Assignment: Seller signup form.
 
 To start:
 - `npm i` and `composer install` to install all dependencies.
@@ -9,6 +9,7 @@ To start:
 - Project should be visible at `http://127.0.0.1:8000/`.
 
 ## Known issues:
+
 - Submission does not work. It fails due to a MySQL issue I haven't yet been able to resolve:
     - If `DB_HOST` in `.env` set to `mysql`, `./vendor/bin/sail artisan migrate` will work - but upon running INSERT query MySQL will return error `SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known`.
     - If `DB_HOST` in `.env` set to `127.0.0.1` then `./vendor/bin/sail artisan migrate` will result in refused connection, while `php artisan migrate` will result in `The server requested authentication method unknown to the client`.
@@ -34,3 +35,8 @@ To start:
 - Create `inputButton` comonent that takes optional `colour` parameter but defaults to green-text-on-white, button `title`, `target`, and `url/action`.
 - Create custom styled OS element replacements for Select options.
 - Learn how Vue loads image (and all other) assets correctly.
+
+## References:
+
+- [Design found here](https://www.figma.com/file/POQB1y6wcHPZCmA5SfJi6a/Code-Challenge%3A-Seller-Application?node-id=0%3A1).
+- [Project description document found here](https://docs.google.com/document/d/19NjVIuaHSmCCrOBplqxkJLQx4aKUYw_JPbZ3hDlCgTc/edit).
