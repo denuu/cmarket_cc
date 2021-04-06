@@ -2297,8 +2297,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -4348,7 +4346,7 @@ var render = function() {
             _vm._v("Do you already have an online store?")
           ]),
           _vm._v(" "),
-          _c("label", { attrs: { for: "existingStoreYes" } }, [
+          _c("div", [
             _c("input", {
               directives: [
                 {
@@ -4361,7 +4359,7 @@ var render = function() {
               attrs: {
                 type: "radio",
                 id: "existingStoreYes",
-                name: "existingStoreYes",
+                name: "existingStore",
                 value: "yes"
               },
               domProps: { checked: _vm._q(_vm.existingStore, "yes") },
@@ -4372,11 +4370,10 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("span", { staticClass: "selected" }),
-            _vm._v("\n                Yes\n            ")
+            _c("label", { attrs: { for: "existingStoreYes" } }, [_vm._v("Yes")])
           ]),
           _vm._v(" "),
-          _c("label", { attrs: { for: "existingStoreNo" } }, [
+          _c("div", [
             _c("input", {
               directives: [
                 {
@@ -4389,7 +4386,7 @@ var render = function() {
               attrs: {
                 type: "radio",
                 id: "existingStoreNo",
-                name: "existingStoreNo",
+                name: "existingStore",
                 value: "no"
               },
               domProps: { checked: _vm._q(_vm.existingStore, "no") },
@@ -4400,8 +4397,7 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("span", { staticClass: "selected" }),
-            _vm._v("\n                No\n            ")
+            _c("label", { attrs: { for: "existingStoreNo" } }, [_vm._v("No")])
           ])
         ]),
         _vm._v(" "),

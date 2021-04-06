@@ -19,7 +19,7 @@ class CreateSellersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->text('shop_category');
-            $table->string('portfolio_link');
+            $table->string('portfolio_link')->unique();
             $table->boolean('content_owner');
             $table->boolean('existingStore');
             $table->text('existingStoreUrls')->nullable();

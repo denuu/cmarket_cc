@@ -63,17 +63,15 @@
             <div class='inputField width100 inputField--radio'>
                 <label for='existingStore'>Do you already have an online store?</label>
 
-                <label for='existingStoreYes'>
-                    <input type='radio' id='existingStoreYes' name='existingStoreYes' v-model='existingStore' value='yes'/>
-                    <span class="selected"></span>
-                    Yes
-                </label>
-                
-                <label for='existingStoreNo'>
-                    <input type='radio' id='existingStoreNo' name='existingStoreNo' v-model='existingStore' value='no'/>
-                    <span class="selected"></span>
-                    No
-                </label>
+                <div>
+                    <input type='radio' id='existingStoreYes' name='existingStore' v-model='existingStore' value='yes'/>
+                    <label for='existingStoreYes'>Yes</label>
+                </div>
+        
+                <div>
+                    <input type='radio' id='existingStoreNo' name='existingStore' v-model='existingStore' value='no'/>
+                    <label for='existingStoreNo'>No</label>
+                </div>
             </div>
 
             <!-- Existing Store URLs -->

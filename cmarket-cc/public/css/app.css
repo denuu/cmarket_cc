@@ -45,10 +45,12 @@
   border: #fff;
   display: inline-block;
   width: 100%;
+  margin: 0.5rem auto;
 }
 @media screen and (min-width: 768px) {
   .inputButton {
     width: auto;
+    margin: 0.5rem 0;
   }
 }
 .inputButton--green {
@@ -72,10 +74,12 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .formNavigation {
     flex-flow: row nowrap;
+    padding-bottom: auto;
   }
 }
 .formNavigation .flex-self-end {
@@ -83,27 +87,28 @@
 }
 
 .card {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
   background: #fff;
   box-shadow: none;
-  height: calc(100vh - 87px);
-  padding: 40px 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  height: calc(100vh - 87px);
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .card {
-    height: 100%;
-    min-height: 483px;
-    box-shadow: 0px 2px 10px rgba(226, 233, 238, 0.6);
-    max-width: 657px;
     border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(226, 233, 238, 0.6);
+    height: 100%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    margin-bottom: 139px;
+    max-width: 657px;
+    min-height: 483px;
     padding: 40px 40px;
   }
 }
@@ -208,12 +213,61 @@
   font-weight: 500;
   color: #303538;
 }
-.inputField--radio > label:not(:first-child) {
+.inputField--radio > div {
+  padding-top: 12px;
+}
+.inputField--radio label:not(:first-child) {
   font-size: 16px;
   line-height: calc(22 / 16);
   font-weight: 500;
-  padding-top: 12px;
   color: #303538;
+}
+.inputField--radio [type=radio]:checked,
+.inputField--radio [type=radio]:not(:checked) {
+  position: absolute;
+  display: none;
+}
+.inputField--radio [type=radio]:checked + label,
+.inputField--radio [type=radio]:not(:checked) + label {
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  display: inline-block;
+}
+.inputField--radio [type=radio]:checked + label:before,
+.inputField--radio [type=radio]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #899298;
+  border-radius: 100%;
+  background: #fff;
+}
+.inputField--radio [type=radio]:checked + label:before {
+  border-color: #008980;
+}
+.inputField--radio [type=radio]:checked + label:after,
+.inputField--radio [type=radio]:not(:checked) + label:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #39B4AC;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+.inputField--radio [type=radio]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.inputField--radio [type=radio]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
 }
 .inputField.width50 {
   width: calc(50% - 10px);
@@ -224,13 +278,18 @@
 
 html {
   background: #fff;
-  background-image: url(/images/background.png?a2913027eb796b17670984ba2d9c5573);
-  background-position: bottom center;
-  background-repeat: no-repeat;
   font-family: Helvetica, Arial, sans-serif;
   height: 100vh;
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  html {
+    background-image: url(/images/background.png?a2913027eb796b17670984ba2d9c5573);
+    background-position: center 500px;
+    background-repeat: no-repeat;
+    background-size: 1600px auto;
+  }
 }
 html * {
   box-sizing: border-box;
