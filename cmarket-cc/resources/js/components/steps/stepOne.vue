@@ -52,9 +52,11 @@
             </div>
 
             <!-- Content Owner -->
-            <div class='inputField width100'>
-                <input type='checkbox' id='contentOwner' name='contentOwner' v-model='contentOwner' v-if='portfolioLink'>
-                <label for='contentnOwner' v-if='portfolioLink'>Yes, I confirm that the content I submit is authored by me.</label>
+            <div class='inputField width100 inputField--checkbox'>
+                <label for='contentnOwner' v-if='portfolioLink'>
+                    <input type='checkbox' id='contentOwner' name='contentOwner' v-model='contentOwner' v-if='portfolioLink'>
+                    Yes, I confirm that the content I submit is authored by me.
+                </label>
             </div>
 
             <!-- Existing Store -->

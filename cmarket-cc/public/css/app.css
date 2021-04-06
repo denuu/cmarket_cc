@@ -198,11 +198,22 @@
 .inputField select ::placeholder {
   color: #6E777D;
 }
+.inputField--checkbox {
+  margin-top: -18px;
+  margin-left: -3px;
+}
+.inputField--checkbox > label {
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  font-weight: 500;
+  color: #303538;
+}
 .inputField--radio > label:not(:first-child) {
   font-size: 16px;
   line-height: calc(22 / 16);
   font-weight: 500;
   padding-top: 12px;
+  color: #303538;
 }
 .inputField.width50 {
   width: calc(50% - 10px);

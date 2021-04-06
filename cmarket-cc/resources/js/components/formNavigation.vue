@@ -20,7 +20,7 @@
             class='inputButton inputButton--green'
         >
         </input-button> -->
-        <button class='inputButton inputButton--green flex-self-end' @click='goForward()' v-show='!isSubmitted()'>
+        <button :type='nextButtonText() === "Next" ? "button" : "submit"' class='inputButton inputButton--green flex-self-end' @click='goForward()' v-show='!isSubmitted()'>
             {{ nextButtonText() }}
         </button>
     </div>
@@ -30,6 +30,11 @@
 // import InputButton from './inputButton.vue'
 
 export default {
+    data() {
+        return {
+            sellerApplication: {}
+        }
+    },
     methods: {
         nextButtonText() {
             if (this.$route.name === 'secondStep') {
@@ -59,8 +64,17 @@ export default {
         },
         submit() {
             console.log(this.$store.state.form)
-            alert('If only MySQL 8.* mysql_native_password bug could be fixed so we could submit this.')
-            this.$router.push('/3')
+            this.axios
+                .post('http://localhost:8000/api/sellers', this.$store.state.form)
+                // .post('http://localhost:8000/api/sellers', this.seller)
+                .then(response => (
+                    this.$router.push('/3')
+                ))
+                .catch(err => console.log(err)) // TODO: if exists.
+                .finally(() => this.loading = false)
+
+            // alert('If only MySQL 8.* mysql_native_password bug could be fixed so we could submit this.')
+            // this.$router.push('/3')
         }
     }
 }
