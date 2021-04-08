@@ -2281,29 +2281,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/steps/stepOne.vue */ "./resources/js/components/steps/stepOne.vue");
-/* harmony import */ var _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/steps/stepTwo.vue */ "./resources/js/components/steps/stepTwo.vue");
-/* harmony import */ var _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/steps/stepThree.vue */ "./resources/js/components/steps/stepThree.vue");
+/* harmony import */ var _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/steps/stepOne.vue */ "./resources/js/components/steps/stepOne.vue");
+/* harmony import */ var _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/steps/stepTwo.vue */ "./resources/js/components/steps/stepTwo.vue");
+/* harmony import */ var _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/steps/stepThree.vue */ "./resources/js/components/steps/stepThree.vue");
 
 
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_4__.default);
+vue__WEBPACK_IMPORTED_MODULE_3__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_4__.default);
 var routes = [{
   path: "/",
   name: "firstStep",
-  component: _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_1__.default
+  component: _components_steps_stepOne_vue__WEBPACK_IMPORTED_MODULE_0__.default
 }, {
   path: "/2",
   name: "secondStep",
-  component: _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_2__.default
+  component: _components_steps_stepTwo_vue__WEBPACK_IMPORTED_MODULE_1__.default
 }, {
   path: "/3",
   name: "thirdStep",
-  component: _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_3__.default
+  component: _components_steps_stepThree_vue__WEBPACK_IMPORTED_MODULE_2__.default
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_4__.default({
   mode: "history",

@@ -12,8 +12,13 @@ To start:
 
 - Submission does not work. It fails due to a MySQL issue I haven't yet been able to resolve:
     - If `DB_HOST` in `.env` set to `mysql`, `./vendor/bin/sail artisan migrate` will work - but upon running INSERT query MySQL will return error `SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known`.
-    - If `DB_HOST` in `.env` set to `127.0.0.1` then `./vendor/bin/sail artisan migrate` will result in refused connection, while `php artisan migrate` will result in `The server requested authentication method unknown to the client`.
-    - If `DB_HOST` in `.env` set to `localhost` then `./vendor/bin/sail artisan migrate` and `php artisan migrate` will _both_ result in `No such file or directory`.
+    - If `DB_HOST` in `.env` set to `127.0.0.1` then `./vendor/bin/sail artisan migrate` will result in refused connection, while `php artisan migrate` will result in `The server requested authentication method unknown to the client`. This is likely because it needs to run with `php artisan migrate`, but that results in `The server requested authentication method unknown to the client`. Which should be resolved with:
+        ```mysql
+        CREATE USER 'user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'yourpassword';
+        GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;
+        ```
+    But that results in the error `Access denied; you need (at least one of) the CREATE USER privilege(s) for this operation`.
+    - If `DB_HOST` in `.env` set to `localhost` then `./vendor/bin/sail artisan migrate` and `php artisan migrate` will _both_ result in `No such file or directory` or failing authentication.
 
 - Design assumptions made, could be misconstrued as errors:
     - Background sticks to bottom of the viewport, this was not defined in the project rundown.
